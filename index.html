@@ -64,9 +64,15 @@ nav .cpt{margin-left:auto;font-size:11px;font-weight:400;letter-spacing:.08em;co
 .ban span{white-space:nowrap}
 
 /* promesse */
-.promesse{font-size:34px;font-weight:500;letter-spacing:-.04em;line-height:1.04;
+.saison{font-size:13px;font-weight:500;letter-spacing:-.02em;margin-top:18px}
+.auteur{display:flex;gap:14px;align-items:flex-start;margin-top:26px;
+  border-top:1px solid #000;padding-top:16px}
+.auteur img{width:72px;height:96px;flex-shrink:0;display:block;background:#f4f4f4}
+.auteur p{font-size:13px;letter-spacing:-.02em;margin:0}
+.auteur b{font-weight:600}
+h1.promesse{font-size:34px;font-weight:500;letter-spacing:-.04em;line-height:1.04;
   margin-top:20px;max-width:13em;text-wrap:balance}
-@media(min-width:900px){.promesse{font-size:52px;max-width:11em}}
+@media(min-width:900px){h1.promesse{font-size:52px;max-width:11em}}
 .promesse b{font-weight:500;border-bottom:1px solid #000}
 
 /* vignette selectionnable */
@@ -108,6 +114,10 @@ footer p{margin-bottom:10px;max-width:40em}
   *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
 
+::view-transition-group(piece){animation-duration:320ms;
+  animation-timing-function:cubic-bezier(.32,.72,0,1)}
+::view-transition-old(piece),::view-transition-new(piece){mix-blend-mode:normal}
+
 /* --- vue rapprochee --- */
 dialog{border:0;padding:0;margin:0;max-width:100%;max-height:100%;width:100%;height:100%;
   background:#fff;color:#000;overflow:auto}
@@ -147,13 +157,22 @@ dialog:not([open]){display:none}
 <div class="w">
 <header>
   <div class="mk">Maison Godefroi</div>
-  <h1>RADICE — Automne / Hiver 26</h1>
-  <p class="promesse">Essayez le modèle d’atelier.
-  <b>La vôtre est coupée sur vous.</b></p>
-  <p class="lede" style="margin-top:12px">Les pièces de la collection sont en boutique. Vous les essayez, vous choisissez la vôtre — elle
-  est ensuite coupée à vos mesures. Chaque pièce est façonnée à la main, en atelier, jamais en série.</p>
+  <p class="saison">RADICE — Automne / Hiver 26</p>
+  <h1 class="promesse">Vous essayez. Vous choisissez.
+  <b>La vôtre est coupée sur vous.</b></h1>
+  <p class="lede">Une heure au 283, rue Notre-Dame Ouest. Les pièces de la collection sont en
+  boutique pour l’essayage. Celle que vous retenez est ensuite coupée à vos mesures, façonnée à la
+  main, jamais en série.</p>
+
+  <div class="auteur">
+    <img src="pedro.jpg" srcset="pedro.jpg 1x, pedro@2x.jpg 2x" width="72" height="96"
+         alt="Pedro Tobia, designer de la collection RADICE">
+    <p><b>Pedro Tobia</b><br>Designer de la collection. Je vous reçois moi-même et je prends vos
+    mesures. <a href="tel:+14384882168" style="border-bottom:1px solid #000;white-space:nowrap">438 488 2168</a></p>
+  </div>
+
   <p class="ban"><span>Essai gratuit</span> · <span>60 min</span> · <span>Sans obligation</span>
-  · <span>Sur mesure</span> · <span>Façonné à la main</span> · <span>283 Notre-Dame O.</span></p>
+  · <span>Rien à payer pour venir</span></p>
 </header>
 </div>
 
@@ -420,24 +439,18 @@ dialog:not([open]){display:none}
   <div><dt>Rendez-vous</dt><dd>Gratuit, sans obligation d’achat. Comptez une heure.</dd></div>
   <div><dt>Hors Montréal</dt><dd>Nous prenons vos mesures à distance, par Zoom. Vous n’avez pas besoin de vous déplacer.</dd></div>
   <div><dt>Prix</dt><dd>Le prix affiché est celui de la pièce, taxes en sus.</dd></div>
-  <div><dt>Paiement</dt><dd>Réglé en totalité à la commande. C’est la condition pour lancer une coupe qui n’existe que pour vous.</dd></div>
+  <div><dt>Paiement</dt><dd>Acompte de 50 % à la commande, solde à la livraison. Rien à payer pour venir essayer.</dd></div>
   <div><dt>Retouches</dt><dd>Incluses. Une fois la pièce livrée, on l’ajuste autant qu’il le faut.</dd></div>
   <div><dt>Essayage</dt><dd><a href="https://maps.google.com/?q=283+rue+Notre-Dame+Ouest+Montreal" target="_blank" rel="noopener" style="border-bottom:1px solid #000">283, rue Notre-Dame Ouest, Montréal</a></dd></div>
 </dl>
 
 <footer>
-  <div class="signature-bloc">
-    <img class="portrait" src="pedro.jpg" srcset="pedro.jpg 1x, pedro@2x.jpg 2x"
-         width="88" height="117" alt="Pedro Tobia, designer de la collection RADICE">
-    <div class="txt">
-      <p class="sig">Pedro Tobia</p>
-      <p>Designer de la collection RADICE pour Maison Godefroi. Je reçois moi-même au 283, rue
-      Notre-Dame Ouest, et je prends vos mesures.</p>
-    </div>
-  </div>
+  <p class="sig">Pedro Tobia</p>
+  <p>Designer de la collection RADICE pour Maison Godefroi. Je reçois au 283, rue Notre-Dame Ouest,
+  sur rendez-vous.</p>
   <p>Écrivez-moi la pièce qui vous intéresse — je vous propose deux moments.</p>
   <p class="canaux">
-    <a href="https://wa.me/14384882168" target="_blank" rel="noopener">WhatsApp 438 488 2168</a>
+    <a href="sms:+14384882168">Texto 438 488 2168</a>
     <a href="tel:+14384882168">Appeler 438 488 2168</a>
     <a href="https://ig.me/m/pdronino" target="_blank" rel="noopener">Instagram @pdronino</a>
   </p>
@@ -449,7 +462,7 @@ dialog:not([open]){display:none}
 </div>
 
 <div class="bar" id="bar">
-  <a id="lien" href="https://wa.me/14384882168" target="_blank" rel="noopener">
+  <a id="lien" href="sms:+14384882168">
     <span id="btxt">Écrire à Pedro — rendez-vous gratuit</span>
     <span class="sel" id="bsel"></span>
   </a>
@@ -462,7 +475,7 @@ dialog:not([open]){display:none}
     <div class="vligne"><span class="vnom" id="vnom"></span><span class="vprix" id="vprix"></span></div>
     <p class="vdesc" id="vdesc"></p>
     <div class="vspec">
-      Coupée à vos mesures<br>Façonnée à la main, jamais en série<br>Retouches incluses<br>Essayage sur rendez-vous, 283 Notre-Dame O.
+      Coupée à vos mesures<br>Façonnée à la main, jamais en série<br>Acompte 50 %, solde à la livraison<br>Retouches incluses
     </div>
     <button class="vajouter" type="button" id="vajouter"></button>
     <a class="vfiche" id="vfiche" href="#" target="_blank" rel="noopener">Fiche complète ↗</a>
@@ -471,7 +484,7 @@ dialog:not([open]){display:none}
 
 <script>
 (function () {
-  var WA = "14384882168";
+  var TEL = "+14384882168";
   document.documentElement.className += " js";
 
   var g = document.getElementById("g"),
@@ -522,12 +535,12 @@ dialog:not([open]){display:none}
     if (!choix.length) {
       btxt.textContent = "\u00c9crire \u00e0 Pedro \u2014 rendez-vous gratuit";
       bsel.textContent = "";
-      lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(
+      lien.href = "sms:" + TEL + "?&body=" + encodeURIComponent(
         "Bonjour Pedro (Maison Godefroi), j\u2019aimerais prendre rendez-vous pour essayer la collection RADICE.");
     } else {
       btxt.textContent = "Essayer \u2014 " + choix.length + (choix.length > 1 ? " pi\u00e8ces" : " pi\u00e8ce");
       bsel.textContent = choix.join(", ");
-      lien.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(
+      lien.href = "sms:" + TEL + "?&body=" + encodeURIComponent(
         "Bonjour Pedro (Maison Godefroi), j\u2019aimerais essayer " + choix.join(", ") +
         " de la collection RADICE." + (post ? " (" + post + ")" : ""));
     }
@@ -558,6 +571,21 @@ dialog:not([open]){display:none}
     vaj.textContent = on ? "Retirer de ma s\u00e9lection" : "Ajouter \u00e0 ma s\u00e9lection";
     vaj.dataset.on = on ? "1" : "0";
   }
+  var doux = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function morph(source, faire) {
+    if (!doux || !document.startViewTransition) { faire(); return; }
+    source.style.viewTransitionName = "piece";
+    vimg.style.viewTransitionName = "piece";
+    var rendre = function () {
+      source.style.viewTransitionName = "";
+      vimg.style.viewTransitionName = "";
+    };
+    try {
+      document.startViewTransition(faire).finished.then(rendre, rendre);
+    } catch (e) { faire(); rendre(); }
+  }
+
   function ouvrir(carte) {
     if (!vue || !vue.showModal) {
       var f = carte.querySelector(".fiche");
@@ -574,13 +602,18 @@ dialog:not([open]){display:none}
     vdesc.textContent = carte.querySelector(".d").textContent;
     vfiche.href = carte.querySelector(".fiche").href;
     libelle(carte);
-    vue.showModal();
-    vue.scrollTop = 0;
-    document.body.style.overflow = "hidden";
+    morph(im, function () {
+      vue.showModal();
+      vue.scrollTop = 0;
+      document.body.style.overflow = "hidden";
+    });
   }
   function fermer() {
     document.body.style.overflow = "";
-    if (vue.open) vue.close();
+    if (!vue.open) return;
+    var im = courante ? courante.querySelector("img") : null;
+    if (im) morph(im, function () { vue.close(); });
+    else vue.close();
   }
   if (vue) {
     vue.addEventListener("close", function () { document.body.style.overflow = ""; });
