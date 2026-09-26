@@ -475,7 +475,7 @@ dialog:not([open]){display:none}
 <div class="bar" id="bar">
   <div class="dedans">
     <a class="ecrire" id="lien" href="sms:+14384882168">
-      <span id="btxt">Écrire à Pedro — rendez-vous gratuit</span>
+      <span id="btxt">Prendre rendez-vous</span>
       <span class="sel" id="bsel"></span>
     </a>
     <a class="appeler" href="tel:+14384882168" aria-label="Appeler Pedro au 438 488 2168">Appeler</a>
@@ -555,7 +555,7 @@ dialog:not([open]){display:none}
       setTimeout(function () { btxt.classList.remove("change"); }, 150);
     }
     if (!choix.length) {
-      btxt.textContent = "\u00c9crire \u00e0 Pedro \u2014 rendez-vous gratuit";
+      btxt.textContent = "Prendre rendez-vous";
       bsel.textContent = "";
       lien.href = "sms:" + TEL + "?&body=" + encodeURIComponent(
         "Bonjour Pedro (Maison Godefroi), j\u2019aimerais prendre rendez-vous pour essayer la collection RADICE.");
