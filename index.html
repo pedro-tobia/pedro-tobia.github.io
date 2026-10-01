@@ -75,6 +75,13 @@ h2{font-size:26px;line-height:30px}
 .bt-plein{background:var(--noir);color:var(--blanc)}
 .bt-vide{border:1px solid var(--noir);color:var(--noir)}
 .bt-vide:hover{background:var(--noir);color:var(--blanc)}
+.aussi{margin:18px 0 0;font-size:13px;line-height:20px;color:var(--n5)}
+.aussi a{color:var(--n5);border-bottom:1px solid var(--n2);text-decoration:none}
+.aussi a:hover{color:var(--noir);border-color:var(--noir)}
+.tri{display:flex;gap:8px;margin:18px 0 0;flex-wrap:wrap}
+.tri button{font:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  padding:9px 16px;border:1px solid var(--n2);background:var(--blanc);color:var(--n5);cursor:pointer}
+.tri button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
 
 footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:22px 0 64px;font-size:12px;line-height:18px;color:var(--n4)}
 footer a{color:var(--n4)}
@@ -88,6 +95,14 @@ footer a{color:var(--n4)}
 <header>
   <img class="mark" src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/godefroi-logotype-gras.png?v=1790808112&width=500" alt="Maison Godefroi">
 </header>
+
+<dl class="faits">
+  <div class="fait"><dt>Delivery</dt><dd>10 working days<span>From measurements to the door</span></dd></div>
+  <div class="fait"><dt>Fit</dt><dd>Individual pattern<span>Made to measure, no supplement</span></dd></div>
+  <div class="fait"><dt>Materials</dt><dd>100 % natural<span>No synthetics in the collection</span></dd></div>
+  <div class="fait"><dt>Made in</dt><dd>Montréal<span>By hand, in our atelier</span></dd></div>
+  <div class="fait"><dt>Measurements</dt><dd>Online — or I travel<span>For several players, I come to you</span></dd></div>
+</dl>
 
 <section class="duo">
   <img src="photos/pedro-atelier.jpg" alt="Pedro Tobia backstage at the Héritage show, Montréal, 19 September 2026" loading="eager">
@@ -109,17 +124,18 @@ footer a{color:var(--n4)}
   <p style="margin:15px 0 0;max-width:62ch">Everything is cut and sewn by hand in Montréal. Ten working days from the measurements to the delivery — made to measure, or in the house's standard sizes.</p>
 </section>
 
-<dl class="faits">
-  <div class="fait"><dt>Delivery</dt><dd>10 working days<span>From measurements to the door</span></dd></div>
-  <div class="fait"><dt>Fit</dt><dd>Individual pattern<span>Made to measure, no supplement</span></dd></div>
-  <div class="fait"><dt>Materials</dt><dd>100 % natural<span>No synthetics in the collection</span></dd></div>
-  <div class="fait"><dt>Made in</dt><dd>Montréal<span>By hand, in our atelier</span></dd></div>
-</dl>
+
 
 <section>
   <p class="sur">Le Défilé Héritage · 19 September 2026</p>
   <h2>The looks</h2>
+  <div class="tri" id="tri">
+    <button type="button" class="on" data-g="">All</button>
+    <button type="button" data-g="m">Menswear</button>
+    <button type="button" data-g="f">Womenswear</button>
+  </div>
   <div class="grille" id="grille"></div>
+  <noscript><p style="color:#585959;margin-top:18px">The twenty-two looks from the show are on <a href="https://maisongodefroi.com/collections/radice-fall-winter-2026?ref=pedro-da">maisongodefroi.com</a>.</p></noscript>
 </section>
 
 <section class="parler">
@@ -127,9 +143,10 @@ footer a{color:var(--n4)}
   <h2>An appointment — or a piece that does not exist yet.</h2>
   <p>If one of the looks above is close to what you have in mind, I can cut it on an individual pattern. And if nothing here is quite it, tell me what you are after: I draw on commission, with the atelier's leather at hand, and I take those projects on myself. It is the part of the work I like best.</p>
   <div class="duo-b">
-    <a class="bt bt-plein" id="rdv" href="sms:+14384882168">Book an appointment</a>
-    <a class="bt bt-vide" id="projet" href="sms:+14384882168">Discuss a special project</a>
+    <a class="bt bt-plein" id="rdv" href="mailto:pedro@maisongodefroi.com">Book an appointment</a>
+    <a class="bt bt-vide" id="projet" href="mailto:pedro@maisongodefroi.com">Discuss a special project</a>
   </div>
+  <p class="aussi">Or <a id="sms1" href="sms:+14384882168">send me a text</a> · <a href="tel:+14384882168">call 438 488 2168</a></p>
 </section>
 <script>(function(){
   var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
@@ -159,46 +176,69 @@ footer a{color:var(--n4)}
 <script>
 var BOUTIQUE = "https://maisongodefroi.com/collections/radice-fall-winter-2026?ref=pedro-da";
 var LOOKS = [
- {n:1, nom:"REMY", mat:"Double-breasted blazer in suede", h:"remy-blazer-croise-suede-homme"},
- {n:2, nom:"", mat:"Short ivory fur jacket", h:""},
- {n:3, nom:"MARIS", mat:"Jacket and skirt in pony-effect leather", h:"maris-ensemble-veste-jupe-cuir-facon-poulain"},
- {n:4, nom:"COLETTE", mat:"Jacket and trousers in lambskin", h:"colette-ensemble-veste-pantalon-cuir-agneau"},
- {n:5, nom:"", mat:"Lambskin jacket and trousers", h:""},
- {n:6, nom:"SALOMÉ", mat:"Short jacket in aged leather", h:"salome-veste-courte-cuir-facon-croco-rouge"},
- {n:7, nom:"ROSELYNE", mat:"Long jacket in black pony-effect leather", h:"roselyne-veste-longue-cuir-facon-poulain-noir"},
- {n:8, nom:"DANTE", mat:"Black fox fur jacket", h:"dante-veste-fourrure-renard-noir-homme"},
- {n:9, nom:"GABRIEL", mat:"Crocodile leather jacket, signature logo", h:"gabriel-veste-cuir-ancre-shearling"},
- {n:10, nom:"MARCEL", mat:"Peacoat in merino wool and leather", h:"marcel-caban-laine-cuir-homme"},
- {n:11, nom:"JEAN", mat:"Short quilted jacket, leather pockets", h:"jean-doudoune-courte-homme-poches-cuir"},
- {n:12, nom:"NORTH", mat:"Short quilted jacket in black", h:"north-veste-courte-matelassee-noire"},
- {n:13, nom:"BEAUMONT", mat:"Short trench in grey suede", h:"beaumont-trench-court-cuir-suede-gris"},
- {n:14, nom:"AURÈLE", mat:"Tuxedo jacket in cashmere, officer collar", h:"aurele-veste-smoking-col-officier-homme"},
- {n:15, nom:"HENRI", mat:"Greige wool blouson, leather collar", h:"henri-blouson-laine-greige-col-cuir-homme"},
- {n:16, nom:"BRIDGET", mat:"Sleeveless gilet in ivory wool and leather", h:"bridget-gilet-sans-manches-laine-ivoire"},
- {n:17, nom:"", mat:"Long lambskin coat", h:""},
- {n:18, nom:"LÉON", mat:"Long officer coat in merino wool and leather", h:"leon-manteau-officier-laine-cuir-homme"},
- {n:19, nom:"NORDIQUE", mat:"Long quilted parka in cowhide", h:"nordique-parka-longue-cuir-vachette"},
- {n:20, nom:"AMY", mat:"Short coat in white fox fur", h:"amy-manteau-court-fourrure-renard-blanc"},
- {n:21, nom:"JEANNE", mat:"Short double-breasted jacket, cherry patent leather", h:"jeanne-veste-courte-croisee-cuir-verni-rouge"},
- {n:22, nom:"SUZANNE", mat:"Short jacket in wool and cashmere, fox cuffs", h:"suzanne-veste-courte-laine-cachemire-renard"}
+ {n:1, nom:"REMY", mat:"Double-breasted blazer in suede", h:"remy-blazer-croise-suede-homme", g:"m"},
+ {n:2, nom:"", mat:"Short ivory fur jacket", h:"", g:""},
+ {n:3, nom:"MARIS", mat:"Jacket and skirt in pony-effect leather", h:"maris-ensemble-veste-jupe-cuir-facon-poulain", g:"f"},
+ {n:4, nom:"COLETTE", mat:"Jacket and trousers in lambskin", h:"colette-ensemble-veste-pantalon-cuir-agneau", g:"f"},
+ {n:5, nom:"", mat:"Lambskin jacket and trousers", h:"", g:""},
+ {n:6, nom:"SALOMÉ", mat:"Short jacket in aged leather", h:"salome-veste-courte-cuir-facon-croco-rouge", g:"f"},
+ {n:7, nom:"ROSELYNE", mat:"Long jacket in black pony-effect leather", h:"roselyne-veste-longue-cuir-facon-poulain-noir", g:"f"},
+ {n:8, nom:"DANTE", mat:"Black fox fur jacket", h:"dante-veste-fourrure-renard-noir-homme", g:"m"},
+ {n:9, nom:"GABRIEL", mat:"Crocodile leather jacket, signature logo", h:"gabriel-veste-cuir-ancre-shearling", g:"m"},
+ {n:10, nom:"MARCEL", mat:"Peacoat in merino wool and leather", h:"marcel-caban-laine-cuir-homme", g:"m"},
+ {n:11, nom:"JEAN", mat:"Short quilted jacket, leather pockets", h:"jean-doudoune-courte-homme-poches-cuir", g:"m"},
+ {n:12, nom:"NORTH", mat:"Short quilted jacket in black", h:"north-veste-courte-matelassee-noire", g:"m"},
+ {n:13, nom:"BEAUMONT", mat:"Short trench in grey suede", h:"beaumont-trench-court-cuir-suede-gris", g:"m"},
+ {n:14, nom:"AURÈLE", mat:"Tuxedo jacket in cashmere, officer collar", h:"aurele-veste-smoking-col-officier-homme", g:"m"},
+ {n:15, nom:"HENRI", mat:"Greige wool blouson, leather collar", h:"henri-blouson-laine-greige-col-cuir-homme", g:"m"},
+ {n:16, nom:"BRIDGET", mat:"Sleeveless gilet in ivory wool and leather", h:"bridget-gilet-sans-manches-laine-ivoire", g:"f"},
+ {n:17, nom:"", mat:"Long lambskin coat", h:"", g:""},
+ {n:18, nom:"LÉON", mat:"Long officer coat in merino wool and leather", h:"leon-manteau-officier-laine-cuir-homme", g:"m"},
+ {n:19, nom:"NORDIQUE", mat:"Long quilted parka in cowhide", h:"nordique-parka-longue-cuir-vachette", g:"m"},
+ {n:20, nom:"AMY", mat:"Short coat in white fox fur", h:"amy-manteau-court-fourrure-renard-blanc", g:"f"},
+ {n:21, nom:"JEANNE", mat:"Short double-breasted jacket, cherry patent leather", h:"jeanne-veste-courte-croisee-cuir-verni-rouge", g:"f"},
+ {n:22, nom:"SUZANNE", mat:"Short jacket in wool and cashmere, fox cuffs", h:"suzanne-veste-courte-laine-cachemire-renard", g:"f"}
 ];
 (function(){
-  var g = document.getElementById("grille");
-  LOOKS.forEach(function(L){
-    var url = L.h ? "https://maisongodefroi.com/products/" + L.h + "?ref=pedro-da" : BOUTIQUE;
-    var a = document.createElement("a");
-    a.className = "look"; a.href = url;
-    a.target = "_blank"; a.rel = "noopener";
-    var num = ("0" + L.n).slice(-2);
-    a.innerHTML =
-      '<img class="ph" src="photos/look-' + num + '.jpg" loading="lazy" alt="' +
-        (L.nom ? L.nom + ' — ' : '') + L.mat + ', Le Défilé Héritage, Montréal">' +
-      (L.nom ? '<p class="nom">' + L.nom + '</p>' : '') +
-      '<p class="mat">' + L.mat + '</p>' +
-      '<p class="voir">See the piece</p>';
-    g.appendChild(a);
+  var BOUT = "?ref=pedro-da";
+  var g = document.getElementById("grille"), tri = document.getElementById("tri"), genre = "";
+  function peindre(){
+    g.innerHTML = "";
+    LOOKS.filter(function(L){ return !genre || L.g === genre; }).forEach(function(L){
+      var url = L.h ? "https://maisongodefroi.com/products/" + L.h + BOUT : BOUTIQUE;
+      var a = document.createElement("a");
+      a.className = "look"; a.href = url; a.target = "_blank"; a.rel = "noopener";
+      var num = ("0" + L.n).slice(-2);
+      a.innerHTML =
+        '<img class="ph" src="photos/look-' + num + '.jpg" loading="lazy" alt="' +
+          (L.nom ? L.nom + ' \u2014 ' : '') + L.mat + ', Le Défilé Héritage, Montréal">' +
+        (L.nom ? '<p class="nom">' + L.nom + '</p>' : '') +
+        '<p class="mat">' + L.mat + '</p>' +
+        '<p class="voir">See the piece</p>';
+      g.appendChild(a);
+    });
+  }
+  tri.addEventListener("click", function(e){
+    var b = e.target.closest("button"); if(!b) return;
+    genre = b.getAttribute("data-g");
+    [].forEach.call(tri.querySelectorAll("button"), function(x){ x.classList.toggle("on", x === b); });
+    peindre();
   });
-})();
-</script>
+  peindre();
+
+  var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
+  var M = {
+    rdv:    ["An appointment \u2014 RADICE", "Hello Pedro,\n\nI would like to book an appointment for the RADICE collection.\n\n"],
+    projet: ["A special project", "Hello Pedro,\n\nI have a special project in mind. Could we talk about it?\n\n"]
+  };
+  Object.keys(M).forEach(function(id){
+    var a = document.getElementById(id); if(!a) return;
+    a.href = "mailto:pedro@maisongodefroi.com?subject=" + encodeURIComponent(M[id][0]) +
+             "&body=" + encodeURIComponent(M[id][1]);
+  });
+  var t = document.getElementById("sms1");
+  if(t) t.href = "sms:+14384882168" + sep + "body=" +
+    encodeURIComponent("Hello Pedro \u2014 I saw the RADICE collection.");
+})();</script>
 </body>
 </html>
