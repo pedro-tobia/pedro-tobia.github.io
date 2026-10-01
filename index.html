@@ -1,710 +1,177 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>RADICE — sur rendez-vous | Maison Godefroi</title>
-<meta name="description" content="La collection RADICE, à essayer sur rendez-vous au 283 rue Notre-Dame Ouest, Montréal.">
+<title>Pedro Tobia — RADICE, Maison Godefroi</title>
+<meta name="description" content="Pedro Tobia, artistic director of the RADICE collection for Maison Godefroi. Made to measure, by hand, in Montréal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.shopify.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{
-  font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  font-size:13px;line-height:1.4;color:#000;background:#fff;
-  -webkit-font-smoothing:antialiased;padding-bottom:96px;
+:root{
+  --blanc:#FFFFFF; --n1:#F7F7F7; --n2:#EAEAEA; --n4:#969696; --n5:#585959; --noir:#000000;
+  --col:1100px;
 }
-.w{max-width:960px;margin:0 auto;padding:0 20px}
-a{color:inherit;text-decoration:none}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--blanc);color:var(--noir)}
+body{font-family:"Instrument Sans",-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;line-height:18px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 28px}
 
-/* entete */
-header{padding:22px 0 26px}
-.mk{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-h1{font-size:13px;font-weight:500;letter-spacing:-.02em;margin-top:20px}
-.lede{font-size:13px;font-weight:400;letter-spacing:-.02em;margin-top:4px;max-width:34em}
-.lede b{font-weight:500}
-dl{margin-top:20px;border-top:1px solid #000;padding-top:12px}
-dl div{display:flex;gap:12px;padding:4px 0}
-dt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;min-width:82px;flex-shrink:0}
-dd{font-size:13px;letter-spacing:-.02em}
+/* en-tete */
+header{padding:46px 0 0}
+.mark{width:150px}
+@media(max-width:620px){.mark{width:116px}}
 
-/* filtres */
-nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #000;
-  display:flex;gap:18px;padding:12px 16px;max-width:960px;margin:0 auto}
-nav button{position:relative;font:inherit;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  background:none;border:0;padding:2px 0;cursor:pointer;color:#767676;border-bottom:1px solid transparent}
-nav button[aria-pressed=true]{color:#000;border-bottom-color:#000}
-nav button::after{content:"";position:absolute;inset:-14px -6px}
-nav .cpt{margin-left:auto;font-size:11px;font-weight:400;letter-spacing:.08em;color:#767676;text-transform:uppercase}
+/* titres */
+h1,h2{margin:0;font-weight:600;letter-spacing:-.01em}
+h1{font-size:44px;line-height:46px}
+h2{font-size:26px;line-height:30px}
+@media(max-width:620px){h1{font-size:30px;line-height:33px}h2{font-size:21px;line-height:25px}}
+.sur{font-size:11px;line-height:16px;letter-spacing:.16em;text-transform:uppercase;color:var(--n4);margin:0 0 14px}
 
-/* grille */
-.g{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 8px;padding:88px 0 72px}
-@media(min-width:620px){.g{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:900px){.g{grid-template-columns:repeat(4,1fr)}}
-.p{position:relative;content-visibility:auto;contain-intrinsic-block-size:auto 340px}
-.p[hidden]{display:none}
-.v{display:block;background:#f4f4f4}
-.p img{width:100%;height:auto;display:block;aspect-ratio:3/4;object-fit:cover}
-.t{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-top:8px}
-.n{font-size:13px;font-weight:500;letter-spacing:-.02em}
-.pr{font-size:13px;font-weight:400;color:#000;white-space:nowrap;font-variant-numeric:tabular-nums}
-.d{font-size:13px;font-weight:400;color:#767676;letter-spacing:-.02em;margin-top:2px}
-/* hero promu */
-@media(max-width:619px){.p.hero{grid-column:1/-1}}
+/* portrait + recit */
+.duo{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:48px;align-items:start;margin:52px 0 0}
+@media(max-width:860px){.duo{grid-template-columns:1fr;gap:28px}}
+.duo p{margin:0 0 15px;max-width:60ch}
+.duo p:last-child{margin-bottom:0}
 
-.p
+/* bande de faits */
+.faits{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;
+  background:var(--n2);border-top:1px solid var(--n2);border-bottom:1px solid var(--n2);margin:60px 0}
+.fait{background:var(--blanc);padding:22px 20px}
+.fait dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--n4);margin:0 0 7px}
+.fait dd{margin:0;font-size:17px;line-height:21px;font-weight:600}
+.fait dd span{display:block;font-size:13px;line-height:17px;font-weight:400;color:var(--n5);margin-top:4px}
 
-/* bandeau de reassurance */
-.ban{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  padding:12px 0;border-top:1px solid #000;margin-top:16px;line-height:1.7}
-.ban span{white-space:nowrap}
+/* galerie */
+.grille{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px;margin:34px 0 0}
+@media(max-width:980px){.grille{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.grille{grid-template-columns:repeat(2,1fr);gap:22px 14px}}
+.look{display:block;text-decoration:none}
+.look .ph{background:var(--n1)}
+.look .nom{margin:11px 0 0;font-size:13px;line-height:17px;font-weight:600}
+.look .mat{margin:3px 0 0;font-size:12px;line-height:16px;color:var(--n5)}
+.look .voir{margin:6px 0 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--n4)}
+.look:hover .voir{color:var(--noir)}
 
-/* promesse */
-.lede.respire{margin-top:22px;max-width:44ch}
-.saison{font-size:13px;font-weight:500;letter-spacing:-.02em;margin-top:18px}
-.auteur{display:flex;gap:14px;align-items:flex-start;margin-top:26px;
-  border-top:1px solid #000;padding-top:16px}
-.auteur img{width:72px;height:96px;flex-shrink:0;display:block;background:#f4f4f4}
-.auteur p{font-size:13px;letter-spacing:-.02em;margin:0}
-.auteur b{font-weight:600}
-h1.promesse{font-size:34px;font-weight:500;letter-spacing:-.04em;line-height:1.04;
-  margin-top:20px;max-width:13em;text-wrap:balance}
-@media(min-width:900px){h1.promesse{font-size:52px;max-width:11em}}
-.promesse b{font-weight:500;border-bottom:1px solid #000}
+/* barre d'appel */
+.barre{display:block;background:var(--noir);color:var(--blanc);text-decoration:none;text-align:center;
+  padding:24px 20px;font-size:14px;line-height:18px;letter-spacing:.05em;margin:64px 0 0}
+.canaux{margin:20px 0 0;font-size:13px;line-height:22px;color:var(--n5)}
+.canaux a{color:var(--n5);text-decoration:none;border-bottom:1px solid var(--n2)}
+.canaux a:hover{color:var(--noir);border-color:var(--noir)}
 
-/* vignette selectionnable */
-.p .sel-zone{display:block;width:100%;background:#f4f4f4;border:0;padding:0;cursor:pointer}
-.p.on img{outline:2px solid #000;outline-offset:-2px}
-.fiche{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  color:#767676;display:inline-block;margin-top:6px;position:relative}
-.fiche::after{content:"";position:absolute;inset:-10px -8px}
-.fiche:hover{color:#000}
-
-.s{position:absolute;z-index:2;top:8px;right:8px;width:28px;height:28px;font:inherit;font-size:15px;line-height:1;
-  background:#fff;color:#000;border:1px solid #000;cursor:pointer;padding:0}
-.s[aria-pressed=true]{background:#000;color:#fff}
-.s::after{content:"";position:absolute;inset:-8px}
-
-/* pied */
-footer{border-top:1px solid #000;padding:24px 0 8px;font-size:13px;letter-spacing:-.02em}
-footer p{margin-bottom:10px;max-width:40em}
-.sig{font-weight:500}
-.signature-bloc{display:flex;gap:16px;align-items:flex-start;margin-bottom:10px}
-.portrait{width:88px;height:117px;flex-shrink:0;display:block;background:#fff}
-.signature-bloc .txt{flex:1;min-width:0}
-.canaux{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px}
-.canaux a{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  border-bottom:1px solid #000;padding:6px 0;position:relative}
-.canaux a::after{content:"";position:absolute;inset:-10px -6px}
-.legal{font-size:11px;line-height:1.5;color:#767676;letter-spacing:0;margin-top:22px;max-width:46em}
-
-/* --- mouvement, budget strict --- */
-.p img{opacity:0;transition:opacity .3s ease}
-.p img.ld{opacity:1}
-.s{transition:background .12s ease,color .12s ease,transform .09s ease}
-.s:active{transform:scale(.88)}
-.p.on img{outline:2px solid #000;outline-offset:-2px}
-.g{transition:opacity .15s ease}
-.g.filtrage{opacity:.35}
-@media(prefers-reduced-motion:reduce){
-  .p img{opacity:1;transition:none}
-  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
-}
-
-::view-transition-group(piece){animation-duration:320ms;
-  animation-timing-function:cubic-bezier(.32,.72,0,1)}
-::view-transition-old(piece),::view-transition-new(piece){mix-blend-mode:normal}
-
-/* --- vue rapprochee --- */
-dialog{border:0;padding:0;margin:0;max-width:100%;max-height:100%;width:100%;height:100%;
-  background:#fff;color:#000;overflow:auto}
-dialog::backdrop{background:#fff}
-dialog:not([open]){display:none}
-.vue{max-width:640px;margin:0 auto;padding:0 20px 40px;position:relative}
-.vue img{width:100%;height:auto;display:block;background:#f4f4f4;aspect-ratio:3/4;object-fit:cover}
-.vfermer{position:sticky;top:0;z-index:2;display:flex;justify-content:flex-end;
-  background:#fff;padding:10px 0;margin:0 -20px;padding-right:20px}
-.vnav{position:sticky;bottom:0;display:flex;gap:1px;background:#000;margin:24px -20px 0}
-.vnav button{flex:1;height:52px;font:inherit;font-size:11px;font-weight:600;letter-spacing:.08em;
-  text-transform:uppercase;background:#fff;border:0;cursor:pointer;color:#000}
-.vnav button:disabled{color:#bbb;cursor:default}
-.vfermer button{width:44px;height:44px;font:inherit;font-size:20px;line-height:1;
-  background:none;border:0;cursor:pointer;color:#000}
-.vligne{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:18px}
-.vnom{font-size:22px;font-weight:500;letter-spacing:-.03em}
-.vprix{font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.vdesc{font-size:13px;color:#767676;letter-spacing:-.02em;margin-top:4px}
-.vspec{margin-top:22px;border-top:1px solid #000;padding-top:14px;
-  font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:2}
-.vajouter{width:100%;height:56px;margin-top:24px;font:inherit;font-size:12px;font-weight:600;
-  letter-spacing:.16em;text-transform:uppercase;color:#fff;background:#000;border:0;cursor:pointer}
-.vajouter[data-on="1"]{background:#fff;color:#000;box-shadow:inset 0 0 0 1px #000}
-.vfiche{display:inline-block;margin-top:16px;font-size:11px;font-weight:600;
-  letter-spacing:.08em;text-transform:uppercase;color:#767676;border-bottom:1px solid #767676}
-
-/* barre */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#000;color:#fff;
-  padding-bottom:env(safe-area-inset-bottom)}
-.bar .dedans{display:flex;align-items:stretch;max-width:960px;margin:0 auto}
-.bar a{display:flex;align-items:center;gap:12px;padding:0 18px;height:56px;color:#fff;
-  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.bar .ecrire{flex:1 1 auto;min-width:0;justify-content:space-between}
-.bar .appeler{flex:0 0 auto;border-left:1px solid #3a3a3a;letter-spacing:.12em;white-space:nowrap}
-.bar a:active{background:#1c1c1c}
-#btxt{transition:opacity .15s ease;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#btxt.change{opacity:0}
-.bar .sel{font-weight:400;letter-spacing:.04em;text-transform:none;color:#bdbdbd;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-
+footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:22px 0 64px;font-size:12px;line-height:18px;color:var(--n4)}
+footer a{color:var(--n4)}
+.sep{height:1px;background:var(--n2);margin:58px 0}
 </style>
 </head>
 <body>
 
-<div class="w">
+<div class="wrap">
+
 <header>
-  <div class="mk">Maison Godefroi</div>
-  <p class="saison">RADICE — Automne / Hiver 26</p>
-  <h1 class="promesse">Vous essayez. Vous choisissez.
-  <b>La vôtre est coupée sur vous.</b></h1>
-  <p class="lede respire">Une heure au 283, rue Notre-Dame Ouest. Les pièces de la collection sont en
-  boutique pour l’essayage. Celle que vous retenez est ensuite coupée à vos mesures, façonnée à la
-  main, jamais en série.</p>
-
-  <div class="auteur">
-    <img src="pedro.jpg" srcset="pedro.jpg 1x, pedro@2x.jpg 2x" width="72" height="96"
-         alt="Pedro Tobia, designer de la collection RADICE">
-    <p><b>Pedro Tobia</b><br>Designer de la collection. Je vous reçois moi-même et je prends vos
-    mesures. <a href="tel:+14384882168" style="border-bottom:1px solid #000;white-space:nowrap">438 488 2168</a></p>
-  </div>
-
-  <p class="ban"><span>Essai gratuit</span> · <span>60 min</span> · <span>Sans obligation</span>
-  · <span>Rien à payer pour venir</span></p>
+  <img class="mark" src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/godefroi-logotype-gras.png?v=1790808112&width=500" alt="Maison Godefroi">
 </header>
-</div>
 
-<nav>
-  <button type="button" data-f="tout" aria-pressed="true">Tout</button>
-  <button type="button" data-f="femme" aria-pressed="false">Femme</button>
-  <button type="button" data-f="homme" aria-pressed="false">Homme</button>
-  <span class="cpt" id="cpt"></span>
-</nav>
+<section class="duo">
+  <img src="photos/pedro-atelier.jpg" alt="Pedro Tobia backstage at the Héritage show, Montréal, 19 September 2026" loading="eager">
+  <div>
+    <p class="sur">Pedro Tobia · Artistic Director</p>
+    <h1>I cut for one body at a time.</h1>
+    <p style="margin-top:22px">I was born in Toulouse, in the south of France. I came to clothing through people rather than through school — as a celebrity stylist in Paris, working independently with artists signed to Sony, Warner Music, Believe and Rec. 118. Dressing someone who will be photographed all night teaches you one thing quickly: a garment either holds the body or it does not, and no amount of styling hides the difference.</p>
+    <p>Today I am artistic director of Maison Godefroi, in Montréal, and creative consultant on its collections. I draw the pieces, I choose the materials, and I am in the atelier when they are cut.</p>
+  </div>
+</section>
 
-<div class="w">
-<div class="g" id="g">
-<article class="p" data-g="femme" data-n="COLETTE" data-h="colette-ensemble-veste-pantalon-cuir-agneau">
-<button class="sel-zone" type="button" aria-label="Voir COLETTE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/07_COLETTE__1.png?v=1790115962&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/07_COLETTE__1.png?v=1790115962&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/07_COLETTE__1.png?v=1790115962&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/07_COLETTE__1.png?v=1790115962&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="COLETTE — Ensemble veste et pantalon, cuir d’agneau"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">COLETTE</span><span class="pr">7 000 $</span></div>
-<p class="d">Ensemble veste et pantalon, cuir d’agneau</p>
-<a class="fiche" href="https://maisongodefroi.com/products/colette-ensemble-veste-pantalon-cuir-agneau?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="SOLÈNE" data-h="solene-trench-long-cuir-noir-renard">
-<button class="sel-zone" type="button" aria-label="Voir SOLÈNE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/trench-cuir-fourrure-noir__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/trench-cuir-fourrure-noir__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/trench-cuir-fourrure-noir__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/trench-cuir-fourrure-noir__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="SOLÈNE — Trench long en cuir d’agneau, bordé de renard"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">SOLÈNE</span><span class="pr">6 900 $</span></div>
-<p class="d">Trench long en cuir d’agneau, bordé de renard</p>
-<a class="fiche" href="https://maisongodefroi.com/products/solene-trench-long-cuir-noir-renard?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="ROSE" data-h="rose-manteau-long-laine-renard">
-<button class="sel-zone" type="button" aria-label="Voir ROSE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-long-laine-fourrure-noir__1_face.jpg?v=1790115078&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-long-laine-fourrure-noir__1_face.jpg?v=1790115078&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-long-laine-fourrure-noir__1_face.jpg?v=1790115078&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-long-laine-fourrure-noir__1_face.jpg?v=1790115078&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ROSE — Manteau long en laine et renard"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ROSE</span><span class="pr">5 900 $</span></div>
-<p class="d">Manteau long en laine et renard</p>
-<a class="fiche" href="https://maisongodefroi.com/products/rose-manteau-long-laine-renard?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="MARIS" data-h="maris-ensemble-veste-jupe-cuir-facon-poulain">
-<button class="sel-zone" type="button" aria-label="Voir MARIS de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face.jpg?v=1790115371&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face.jpg?v=1790115371&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face.jpg?v=1790115371&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face.jpg?v=1790115371&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="MARIS — Ensemble veste et jupe, cuir façon poulain"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">MARIS</span><span class="pr">5 600 $</span></div>
-<p class="d">Ensemble veste et jupe, cuir façon poulain</p>
-<a class="fiche" href="https://maisongodefroi.com/products/maris-ensemble-veste-jupe-cuir-facon-poulain?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="LÉON" data-h="leon-manteau-officier-laine-cuir-homme">
-<button class="sel-zone" type="button" aria-label="Voir LÉON de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/LB_Officier_Coat.png?v=1790118394&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/LB_Officier_Coat.png?v=1790118394&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/LB_Officier_Coat.png?v=1790118394&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/LB_Officier_Coat.png?v=1790118394&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="LÉON — Manteau officier long, laine mérinos et cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">LÉON</span><span class="pr">5 499 $</span></div>
-<p class="d">Manteau officier long, laine mérinos et cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/leon-manteau-officier-laine-cuir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="DANTE" data-h="dante-veste-fourrure-renard-noir-homme">
-<button class="sel-zone" type="button" aria-label="Voir DANTE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/RADICE_renard_noir_homme_1_face.png?v=1790115661&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/RADICE_renard_noir_homme_1_face.png?v=1790115661&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/RADICE_renard_noir_homme_1_face.png?v=1790115661&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/RADICE_renard_noir_homme_1_face.png?v=1790115661&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="DANTE — Veste en fourrure de renard noir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">DANTE</span><span class="pr">5 000 $</span></div>
-<p class="d">Veste en fourrure de renard noir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/dante-veste-fourrure-renard-noir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="ROSELYNE" data-h="roselyne-veste-longue-cuir-facon-poulain-noir">
-<button class="sel-zone" type="button" aria-label="Voir ROSELYNE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-longue-veau-facon-poulain-noir__1_face.jpg?v=1790114548&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-longue-veau-facon-poulain-noir__1_face.jpg?v=1790114548&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-longue-veau-facon-poulain-noir__1_face.jpg?v=1790114548&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-longue-veau-facon-poulain-noir__1_face.jpg?v=1790114548&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ROSELYNE — Veste longue en cuir façon poulain" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ROSELYNE</span><span class="pr">4 900 $</span></div>
-<p class="d">Veste longue en cuir façon poulain</p>
-<a class="fiche" href="https://maisongodefroi.com/products/roselyne-veste-longue-cuir-facon-poulain-noir?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="BRIDGET" data-h="bridget-gilet-sans-manches-laine-ivoire">
-<button class="sel-zone" type="button" aria-label="Voir BRIDGET de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/gilet-suede-ivoire__1_face.jpg?v=1790114928&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/gilet-suede-ivoire__1_face.jpg?v=1790114928&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/gilet-suede-ivoire__1_face.jpg?v=1790114928&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/gilet-suede-ivoire__1_face.jpg?v=1790114928&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="BRIDGET — Gilet sans manches, laine ivoire et cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">BRIDGET</span><span class="pr">4 900 $</span></div>
-<p class="d">Gilet sans manches, laine ivoire et cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/bridget-gilet-sans-manches-laine-ivoire?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="ANTONIN" data-h="antonin-veste-capuche-shearling-cuir-femme">
-<button class="sel-zone" type="button" aria-label="Voir ANTONIN de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__1_face.png?v=1790115660&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__1_face.png?v=1790115660&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__1_face.png?v=1790115660&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__1_face.png?v=1790115660&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ANTONIN — Blouson à capuche, shearling et cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ANTONIN</span><span class="pr">4 900 $</span></div>
-<p class="d">Blouson à capuche, shearling et cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/antonin-veste-capuche-shearling-cuir-femme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="ANTONIN" data-h="antonin-veste-capuche-shearling-cuir-homme">
-<button class="sel-zone" type="button" aria-label="Voir ANTONIN de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__7_face_homme.png?v=1790115661&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__7_face_homme.png?v=1790115661&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__7_face_homme.png?v=1790115661&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__7_face_homme.png?v=1790115661&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ANTONIN — Blouson à capuche, shearling et cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ANTONIN</span><span class="pr">4 900 $</span></div>
-<p class="d">Blouson à capuche, shearling et cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/antonin-veste-capuche-shearling-cuir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="ROBERT" data-h="robert-veste-col-espagnol-cuir-facon-poulain-homme">
-<button class="sel-zone" type="button" aria-label="Voir ROBERT de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-col-espagnol-veau-facon-poulain__noir__1_face.jpg?v=1790115811&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-col-espagnol-veau-facon-poulain__noir__1_face.jpg?v=1790115811&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-col-espagnol-veau-facon-poulain__noir__1_face.jpg?v=1790115811&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-col-espagnol-veau-facon-poulain__noir__1_face.jpg?v=1790115811&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ROBERT — Veste à col espagnol, cuir façon poulain" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ROBERT</span><span class="pr">4 900 $</span></div>
-<p class="d">Veste à col espagnol, cuir façon poulain</p>
-<a class="fiche" href="https://maisongodefroi.com/products/robert-veste-col-espagnol-cuir-facon-poulain-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="MARIS" data-h="maris-veste-courte-cuir-facon-poulain">
-<button class="sel-zone" type="button" aria-label="Voir MARIS de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face_726381e1-970b-4767-a1bf-939c77a98a71.jpg?v=1790115079&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face_726381e1-970b-4767-a1bf-939c77a98a71.jpg?v=1790115079&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face_726381e1-970b-4767-a1bf-939c77a98a71.jpg?v=1790115079&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/haircalf-ensemble__noir__face_726381e1-970b-4767-a1bf-939c77a98a71.jpg?v=1790115079&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="MARIS — Veste courte en cuir façon poulain" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">MARIS</span><span class="pr">4 200 $</span></div>
-<p class="d">Veste courte en cuir façon poulain</p>
-<a class="fiche" href="https://maisongodefroi.com/products/maris-veste-courte-cuir-facon-poulain?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="MARCEL" data-h="marcel-caban-laine-cuir-homme">
-<button class="sel-zone" type="button" aria-label="Voir MARCEL de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/25_MARCEL_face_plein_pied.png?v=1790115661&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/25_MARCEL_face_plein_pied.png?v=1790115661&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/25_MARCEL_face_plein_pied.png?v=1790115661&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/25_MARCEL_face_plein_pied.png?v=1790115661&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="MARCEL — Caban en laine mérinos et cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">MARCEL</span><span class="pr">4 200 $</span></div>
-<p class="d">Caban en laine mérinos et cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/marcel-caban-laine-cuir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="AMY" data-h="amy-manteau-court-fourrure-renard-blanc">
-<button class="sel-zone" type="button" aria-label="Voir AMY de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-renard-blanc__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-renard-blanc__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-renard-blanc__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-renard-blanc__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="AMY — Manteau court en fourrure de renard blanc" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">AMY</span><span class="pr">4 000 $</span></div>
-<p class="d">Manteau court en fourrure de renard blanc</p>
-<a class="fiche" href="https://maisongodefroi.com/products/amy-manteau-court-fourrure-renard-blanc?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="LILY" data-h="lily-veste-fourrure-renard-noir-femme">
-<button class="sel-zone" type="button" aria-label="Voir LILY de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-renard-noir__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-renard-noir__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-renard-noir__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-renard-noir__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="LILY — Veste en fourrure de renard noir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">LILY</span><span class="pr">4 000 $</span></div>
-<p class="d">Veste en fourrure de renard noir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/lily-veste-fourrure-renard-noir-femme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="AURÈLE" data-h="aurele-veste-smoking-col-officier-homme">
-<button class="sel-zone" type="button" aria-label="Voir AURÈLE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/20_AURELE__1_face.png?v=1790115962&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/20_AURELE__1_face.png?v=1790115962&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/20_AURELE__1_face.png?v=1790115962&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/20_AURELE__1_face.png?v=1790115962&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="AURÈLE — Veste smoking en cachemire, col officier" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">AURÈLE</span><span class="pr">3 800 $</span></div>
-<p class="d">Veste smoking en cachemire, col officier</p>
-<a class="fiche" href="https://maisongodefroi.com/products/aurele-veste-smoking-col-officier-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="ODETTE" data-h="odette-veste-cuir-agneau-noir-col-renard">
-<button class="sel-zone" type="button" aria-label="Voir ODETTE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-cuir-col-fourrure__1_face.jpg?v=1790115078&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-cuir-col-fourrure__1_face.jpg?v=1790115078&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-cuir-col-fourrure__1_face.jpg?v=1790115078&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-cuir-col-fourrure__1_face.jpg?v=1790115078&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="ODETTE — Veste en cuir d’agneau, col et poignets renard" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">ODETTE</span><span class="pr">3 200 $</span></div>
-<p class="d">Veste en cuir d’agneau, col et poignets renard</p>
-<a class="fiche" href="https://maisongodefroi.com/products/odette-veste-cuir-agneau-noir-col-renard?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="GABRIEL" data-h="gabriel-veste-cuir-ancre-shearling">
-<button class="sel-zone" type="button" aria-label="Voir GABRIEL de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/15_GABRIEL__1_face_ivoire_95a1eaa3-ce5b-4b74-b6c7-173f741e29f0.png?v=1790115962&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/15_GABRIEL__1_face_ivoire_95a1eaa3-ce5b-4b74-b6c7-173f741e29f0.png?v=1790115962&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/15_GABRIEL__1_face_ivoire_95a1eaa3-ce5b-4b74-b6c7-173f741e29f0.png?v=1790115962&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/15_GABRIEL__1_face_ivoire_95a1eaa3-ce5b-4b74-b6c7-173f741e29f0.png?v=1790115962&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="GABRIEL — Veste en cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">GABRIEL</span><span class="pr">3 200 $</span></div>
-<p class="d">Veste en cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/gabriel-veste-cuir-ancre-shearling?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="SUZANNE" data-h="suzanne-veste-courte-laine-cachemire-renard">
-<button class="sel-zone" type="button" aria-label="Voir SUZANNE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/09_SUZANNE__1_face.png?v=1790115516&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/09_SUZANNE__1_face.png?v=1790115516&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/09_SUZANNE__1_face.png?v=1790115516&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/09_SUZANNE__1_face.png?v=1790115516&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="SUZANNE — Veste courte, laine et cachemire, manchettes renard" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">SUZANNE</span><span class="pr">2 900 $</span></div>
-<p class="d">Veste courte, laine et cachemire, manchettes renard</p>
-<a class="fiche" href="https://maisongodefroi.com/products/suzanne-veste-courte-laine-cachemire-renard?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="REMY" data-h="remy-blazer-croise-suede-homme">
-<button class="sel-zone" type="button" aria-label="Voir REMY de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/32_REMY_NOIR__1_face.png?v=1790115662&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/32_REMY_NOIR__1_face.png?v=1790115662&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/32_REMY_NOIR__1_face.png?v=1790115662&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/32_REMY_NOIR__1_face.png?v=1790115662&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="REMY — Blazer croisé en suède" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">REMY</span><span class="pr">2 900 $</span></div>
-<p class="d">Blazer croisé en suède</p>
-<a class="fiche" href="https://maisongodefroi.com/products/remy-blazer-croise-suede-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="NORDIQUE" data-h="nordique-parka-longue-cuir-vachette">
-<button class="sel-zone" type="button" aria-label="Voir NORDIQUE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_64e3a96c-b5d5-4bc1-8816-b57d606c7726.png?v=1774546898&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_64e3a96c-b5d5-4bc1-8816-b57d606c7726.png?v=1774546898&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_64e3a96c-b5d5-4bc1-8816-b57d606c7726.png?v=1774546898&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_64e3a96c-b5d5-4bc1-8816-b57d606c7726.png?v=1774546898&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="NORDIQUE — Parka longue matelassée, cuir de vachette" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">NORDIQUE</span><span class="pr">2 800 $</span></div>
-<p class="d">Parka longue matelassée, cuir de vachette</p>
-<a class="fiche" href="https://maisongodefroi.com/products/nordique-parka-longue-cuir-vachette?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="VALÉRIE" data-h="valerie-blazer-zippe-cuir">
-<button class="sel-zone" type="button" aria-label="Voir VALÉRIE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/12_VALERIE__1_face_noir.png?v=1790115516&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/12_VALERIE__1_face_noir.png?v=1790115516&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/12_VALERIE__1_face_noir.png?v=1790115516&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/12_VALERIE__1_face_noir.png?v=1790115516&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="VALÉRIE — Blazer en cuir d’agneau zippé" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">VALÉRIE</span><span class="pr">2 600 $</span></div>
-<p class="d">Blazer en cuir d’agneau zippé</p>
-<a class="fiche" href="https://maisongodefroi.com/products/valerie-blazer-zippe-cuir?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="SALOMÉ" data-h="salome-veste-courte-cuir-facon-croco-rouge">
-<button class="sel-zone" type="button" aria-label="Voir SALOMÉ de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/13_SALOME__1_face.png?v=1790115516&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/13_SALOME__1_face.png?v=1790115516&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/13_SALOME__1_face.png?v=1790115516&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/13_SALOME__1_face.png?v=1790115516&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="SALOMÉ — Veste courte en cuir façon croco rouge" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">SALOMÉ</span><span class="pr">2 400 $</span></div>
-<p class="d">Veste courte en cuir façon croco rouge</p>
-<a class="fiche" href="https://maisongodefroi.com/products/salome-veste-courte-cuir-facon-croco-rouge?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="STELLA" data-h="stella-blouson-cuir-suede-noir-femme">
-<button class="sel-zone" type="button" aria-label="Voir STELLA de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_fond_blanc_2_7bb95f55-33f8-4aa9-bf9d-725c12717697.png?v=1790114752&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_fond_blanc_2_7bb95f55-33f8-4aa9-bf9d-725c12717697.png?v=1790114752&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_fond_blanc_2_7bb95f55-33f8-4aa9-bf9d-725c12717697.png?v=1790114752&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_fond_blanc_2_7bb95f55-33f8-4aa9-bf9d-725c12717697.png?v=1790114752&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="STELLA — Blouson en cuir de suède noir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">STELLA</span><span class="pr">2 200 $</span></div>
-<p class="d">Blouson en cuir de suède noir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/stella-blouson-cuir-suede-noir-femme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="STELLA" data-h="stella-blouson-cuir-suede-noir-homme">
-<button class="sel-zone" type="button" aria-label="Voir STELLA de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-suede-noir__1_face.jpg?v=1790115661&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-suede-noir__1_face.jpg?v=1790115661&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-suede-noir__1_face.jpg?v=1790115661&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson-suede-noir__1_face.jpg?v=1790115661&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="STELLA — Blouson en cuir de suède noir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">STELLA</span><span class="pr">2 200 $</span></div>
-<p class="d">Blouson en cuir de suède noir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/stella-blouson-cuir-suede-noir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="JEANNE" data-h="jeanne-veste-courte-croisee-cuir-verni-rouge">
-<button class="sel-zone" type="button" aria-label="Voir JEANNE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-courte-vernis-bordeaux__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-courte-vernis-bordeaux__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-courte-vernis-bordeaux__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-courte-vernis-bordeaux__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="JEANNE — Veste courte croisée, cuir verni rouge cerise" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">JEANNE</span><span class="pr">2 200 $</span></div>
-<p class="d">Veste courte croisée, cuir verni rouge cerise</p>
-<a class="fiche" href="https://maisongodefroi.com/products/jeanne-veste-courte-croisee-cuir-verni-rouge?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="JEAN" data-h="jean-doudoune-courte-homme-poches-cuir">
-<button class="sel-zone" type="button" aria-label="Voir JEAN de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/19_JEAN__1_face.png?v=1790115661&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/19_JEAN__1_face.png?v=1790115661&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/19_JEAN__1_face.png?v=1790115661&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/19_JEAN__1_face.png?v=1790115661&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="JEAN — Doudoune courte matelassée, poches en cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">JEAN</span><span class="pr">2 200 $</span></div>
-<p class="d">Doudoune courte matelassée, poches en cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/jean-doudoune-courte-homme-poches-cuir?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="LUCIEN" data-h="lucien-blouson-court-cuir-verni-noir-homme">
-<button class="sel-zone" type="button" aria-label="Voir LUCIEN de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/AUGUSTE_blouson_cuir_verni_noir_1_face.jpg?v=1790116038&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/AUGUSTE_blouson_cuir_verni_noir_1_face.jpg?v=1790116038&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/AUGUSTE_blouson_cuir_verni_noir_1_face.jpg?v=1790116038&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/AUGUSTE_blouson_cuir_verni_noir_1_face.jpg?v=1790116038&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="LUCIEN — Blouson court en cuir verni noir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">LUCIEN</span><span class="pr">2 200 $</span></div>
-<p class="d">Blouson court en cuir verni noir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/lucien-blouson-court-cuir-verni-noir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="HENRI" data-h="henri-blouson-laine-greige-col-cuir-homme">
-<button class="sel-zone" type="button" aria-label="Voir HENRI de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/HENRI_blouson_laine_greige_1_face.jpg?v=1790116038&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/HENRI_blouson_laine_greige_1_face.jpg?v=1790116038&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/HENRI_blouson_laine_greige_1_face.jpg?v=1790116038&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/HENRI_blouson_laine_greige_1_face.jpg?v=1790116038&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="HENRI — Blouson en lainage greige, col de cuir" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">HENRI</span><span class="pr">2 200 $</span></div>
-<p class="d">Blouson en lainage greige, col de cuir</p>
-<a class="fiche" href="https://maisongodefroi.com/products/henri-blouson-laine-greige-col-cuir-homme?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="BEAUMONT" data-h="beaumont-trench-court-cuir-suede-gris">
-<button class="sel-zone" type="button" aria-label="Voir BEAUMONT de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/maison-godefroi_beaumont_front2.png?v=1779294928&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/maison-godefroi_beaumont_front2.png?v=1779294928&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/maison-godefroi_beaumont_front2.png?v=1779294928&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/maison-godefroi_beaumont_front2.png?v=1779294928&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="BEAUMONT — Trench court en cuir de suède gris" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">BEAUMONT</span><span class="pr">2 200 $</span></div>
-<p class="d">Trench court en cuir de suède gris</p>
-<a class="fiche" href="https://maisongodefroi.com/products/beaumont-trench-court-cuir-suede-gris?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="NORDIQUE" data-h="manteau-nordique-noir-reflechissant">
-<button class="sel-zone" type="button" aria-label="Voir NORDIQUE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_b0b84394-0772-427c-860c-5d12827dbf24.png?v=1774546856&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_b0b84394-0772-427c-860c-5d12827dbf24.png?v=1774546856&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_b0b84394-0772-427c-860c-5d12827dbf24.png?v=1774546856&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_b0b84394-0772-427c-860c-5d12827dbf24.png?v=1774546856&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="NORDIQUE — Parka longue noir réfléchissant" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">NORDIQUE</span><span class="pr">2 200 $</span></div>
-<p class="d">Parka longue noir réfléchissant</p>
-<a class="fiche" href="https://maisongodefroi.com/products/manteau-nordique-noir-reflechissant?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="homme" data-n="NORTH" data-h="north-veste-courte-matelassee-noire">
-<button class="sel-zone" type="button" aria-label="Voir NORTH de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_a65786af-ddb5-4e46-888b-0781656e0453.png?v=1774546761&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_a65786af-ddb5-4e46-888b-0781656e0453.png?v=1774546761&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_a65786af-ddb5-4e46-888b-0781656e0453.png?v=1774546761&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/1_a65786af-ddb5-4e46-888b-0781656e0453.png?v=1774546761&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="NORTH — Veste courte matelassée noire" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">NORTH</span><span class="pr">1 600 $</span></div>
-<p class="d">Veste courte matelassée noire</p>
-<a class="fiche" href="https://maisongodefroi.com/products/north-veste-courte-matelassee-noire?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="BRIDGET" data-h="bridget-pantalon-large-laine-ivoire">
-<button class="sel-zone" type="button" aria-label="Voir BRIDGET de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/pantalon-laine-ivoire__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/pantalon-laine-ivoire__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/pantalon-laine-ivoire__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/pantalon-laine-ivoire__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="BRIDGET — Pantalon large en laine ivoire" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">BRIDGET</span><span class="pr">1 600 $</span></div>
-<p class="d">Pantalon large en laine ivoire</p>
-<a class="fiche" href="https://maisongodefroi.com/products/bridget-pantalon-large-laine-ivoire?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="MARIS" data-h="maris-jupe-courte-cuir-facon-poulain">
-<button class="sel-zone" type="button" aria-label="Voir MARIS de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/34_MARIS_JUPE__1_face_noir.png?v=1790115226&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/34_MARIS_JUPE__1_face_noir.png?v=1790115226&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/34_MARIS_JUPE__1_face_noir.png?v=1790115226&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/34_MARIS_JUPE__1_face_noir.png?v=1790115226&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="MARIS — Jupe courte en cuir façon poulain" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">MARIS</span><span class="pr">1 400 $</span></div>
-<p class="d">Jupe courte en cuir façon poulain</p>
-<a class="fiche" href="https://maisongodefroi.com/products/maris-jupe-courte-cuir-facon-poulain?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-<article class="p" data-g="femme" data-n="JEANNE" data-h="jeanne-jupe-courte-cuir-verni-rouge-cerise">
-<button class="sel-zone" type="button" aria-label="Voir JEANNE de près"><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/jupe-vernis-bordeaux__1_face.jpg?v=1790114929&width=660" srcset="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/jupe-vernis-bordeaux__1_face.jpg?v=1790114929&width=330 330w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/jupe-vernis-bordeaux__1_face.jpg?v=1790114929&width=660 660w, https://cdn.shopify.com/s/files/1/0613/3982/8400/files/jupe-vernis-bordeaux__1_face.jpg?v=1790114929&width=990 990w" sizes="(min-width:900px) 23vw, (min-width:620px) 31vw, 47vw" width="330" height="440" alt="JEANNE — Jupe courte en cuir verni rouge cerise" loading="lazy"></button>
-<button class="s" type="button" aria-pressed="false">+</button>
-<div class="t"><span class="n">JEANNE</span><span class="pr">1 200 $</span></div>
-<p class="d">Jupe courte en cuir verni rouge cerise</p>
-<a class="fiche" href="https://maisongodefroi.com/products/jeanne-jupe-courte-cuir-verni-rouge-cerise?ref=pedro-ig" target="_blank" rel="noopener">Fiche ↗</a>
-</article>
-</div>
+<div class="sep"></div>
 
-<dl>
-  <div><dt>Sur mesure</dt><dd>Chaque pièce réalisée avec moi est coupée à vos mesures. Il n’y a pas de taille à choisir.</dd></div>
-  <div><dt>Façon</dt><dd>Façonnée à la main, en atelier, jamais en série. Cuirs et laines d’Italie.</dd></div>
-  <div><dt>Délai</dt><dd>Communiqué à la prise de mesures, selon la pièce.</dd></div>
-  <div><dt>Rendez-vous</dt><dd>Gratuit, sans obligation d’achat. Comptez une heure.</dd></div>
-  <div><dt>Hors Montréal</dt><dd>Nous prenons vos mesures à distance, par Zoom. Vous n’avez pas besoin de vous déplacer.</dd></div>
-  <div><dt>Prix</dt><dd>Le prix affiché est celui de la pièce, taxes en sus.</dd></div>
-  <div><dt>Paiement</dt><dd>Acompte de 50 % à la commande, solde à la livraison. Rien à payer pour venir essayer.</dd></div>
-  <div><dt>Retouches</dt><dd>Incluses. Une fois la pièce livrée, on l’ajuste autant qu’il le faut.</dd></div>
-  <div><dt>Essayage</dt><dd><a href="https://maps.google.com/?q=283+rue+Notre-Dame+Ouest+Montreal" target="_blank" rel="noopener" style="border-bottom:1px solid #000">283, rue Notre-Dame Ouest, Montréal</a></dd></div>
+<section>
+  <p class="sur">The collection</p>
+  <h2>RADICE — root, in Italian.</h2>
+  <p style="margin:20px 0 0;max-width:62ch">A root is what holds, and what you do not see. The collection is built the same way: the work is in the pattern, the seam and the lining, not in a monogram on the outside. Thirty-one looks were shown on 19 September 2026 at La Passerelle, in Montréal's Old Port, for the Héritage show.</p>
+  <p style="margin:15px 0 0;max-width:62ch">We source on a tight circuit, on very precise points, and we judge a material on one criterion: purity. One hundred per cent natural compositions — merino wool, lambskin, cashmere, suede, silk. No synthetics anywhere in the collection. That is a constraint we chose, and it is the reason the pieces age the way they do.</p>
+  <p style="margin:15px 0 0;max-width:62ch">Everything is cut and sewn by hand in Montréal. Ten working days from the measurements to the delivery — made to measure, or in the house's standard sizes.</p>
+</section>
+
+<dl class="faits">
+  <div class="fait"><dt>Delivery</dt><dd>10 working days<span>From measurements to the door</span></dd></div>
+  <div class="fait"><dt>Fit</dt><dd>Individual pattern<span>Made to measure, no supplement</span></dd></div>
+  <div class="fait"><dt>Materials</dt><dd>100 % natural<span>No synthetics in the collection</span></dd></div>
+  <div class="fait"><dt>Made in</dt><dd>Montréal<span>By hand, in our atelier</span></dd></div>
 </dl>
 
+<section>
+  <p class="sur">Le Défilé Héritage · 19 September 2026</p>
+  <h2>The looks</h2>
+  <div class="grille" id="grille"></div>
+</section>
+
+<a class="barre" href="https://pedro-tobia.github.io/?ref=courriel" id="rdv">Book an appointment</a>
+
+<p class="canaux">
+  Or reach me directly —
+  <a href="sms:+14384882168">text 438 488 2168</a> ·
+  <a href="tel:+14384882168">call 438 488 2168</a> ·
+  <a href="https://ig.me/m/maisongodefroi?ref=pedro-da" target="_blank" rel="noopener">Instagram</a>
+</p>
+
 <footer>
-  <p class="sig">Pedro Tobia</p>
-  <p>Designer de la collection RADICE pour Maison Godefroi. Je reçois au 283, rue Notre-Dame Ouest,
-  sur rendez-vous.</p>
-  <p>Écrivez-moi la pièce qui vous intéresse — je vous propose deux moments.</p>
-  <p class="canaux">
-    <a href="sms:+14384882168">Texto 438 488 2168</a>
-    <a href="tel:+14384882168">Appeler 438 488 2168</a>
-    <a href="https://ig.me/m/maisongodefroi?ref=pedro-da" target="_blank" rel="noopener">Instagram @maisongodefroi</a>
-  </p>
-  <p class="legal">Les renseignements que vous transmettez servent uniquement à fixer votre
-  rendez-vous. Ils sont recueillis pour le compte de Maison Godefroi, responsable de leur
-  traitement, et ne sont ni vendus ni utilisés à des fins publicitaires. Pour y accéder, les
-  corriger ou les faire supprimer : info@maisongodefroi.com.</p>
+  Pedro Tobia · Artistic Director, RADICE collection — Maison Godefroi<br>
+  283 Notre-Dame Street West, Montréal, Quebec H2Y 1T7 ·
+  <a href="mailto:pedro@maisongodefroi.com">pedro@maisongodefroi.com</a> ·
+  <a href="https://www.instagram.com/maisongodefroi/" target="_blank" rel="noopener">@maisongodefroi</a><br>
+  <span style="display:inline-block;margin-top:8px">Photographs from Le Défilé Héritage, La Passerelle, Montréal, 19 September 2026.</span>
 </footer>
-</div>
 
-<div class="bar" id="bar">
-  <div class="dedans">
-    <a class="ecrire" id="lien" href="sms:+14384882168">
-      <span id="btxt">Prendre rendez-vous</span>
-      <span class="sel" id="bsel"></span>
-    </a>
-    <a class="appeler" href="tel:+14384882168" aria-label="Appeler Pedro au 438 488 2168">Appeler</a>
-  </div>
 </div>
-
-<dialog id="vue" aria-label="Détail de la pièce">
-  <div class="vue">
-    <div class="vfermer"><button type="button" id="vclose" aria-label="Fermer">&times;</button></div>
-    <img id="vimg" alt="">
-    <div class="vligne"><span class="vnom" id="vnom"></span><span class="vprix" id="vprix"></span></div>
-    <p class="vdesc" id="vdesc"></p>
-    <div class="vspec">
-      Coupée à vos mesures<br>Façonnée à la main, jamais en série<br>Acompte 50 %, solde à la livraison<br>Retouches incluses
-    </div>
-    <button class="vajouter" type="button" id="vajouter"></button>
-    <a class="vfiche" id="vfiche" href="#" target="_blank" rel="noopener">Fiche complète ↗</a>
-    <div class="vnav">
-      <button type="button" id="vprec">← Précédente</button>
-      <button type="button" id="vsuiv">Suivante →</button>
-    </div>
-  </div>
-</dialog>
 
 <script>
-(function () {
-  var TEL = "+14384882168";
-  document.documentElement.className += " js";
-
-  var g = document.getElementById("g"),
-      lien = document.getElementById("lien"),
-      btxt = document.getElementById("btxt"),
-      bsel = document.getElementById("bsel"),
-      cpt  = document.getElementById("cpt"),
-      cartes = [].slice.call(g.querySelectorAll(".p")),
-      choix = [],
-      MOINS = String.fromCharCode(8722);
-
-  var q = new URLSearchParams(location.search);
-  var post = q.get("post") || "";
-
-  [].forEach.call(g.querySelectorAll("img"), function (im) {
-    if (im.complete && im.naturalWidth) im.classList.add("ld");
-    else im.addEventListener("load", function () { im.classList.add("ld"); }, { once: true });
+var BOUTIQUE = "https://maisongodefroi.com/collections/radice-fall-winter-2026?ref=pedro-da";
+var LOOKS = [
+ {n:1,  nom:"", mat:"Double-breasted jacket, gold buttons", h:""},
+ {n:2,  nom:"", mat:"Short ivory fur jacket", h:""},
+ {n:3,  nom:"", mat:"Lambskin and fur, short", h:""},
+ {n:4,  nom:"", mat:"Lambskin jacket and wide trousers", h:""},
+ {n:5,  nom:"", mat:"Lambskin jacket and trousers", h:""},
+ {n:6,  nom:"", mat:"Red crocodile-finish leather", h:""},
+ {n:7,  nom:"", mat:"Lambskin, flared trousers", h:""},
+ {n:8,  nom:"", mat:"Black fox, full sleeve", h:""},
+ {n:9,  nom:"", mat:"Lambskin blouson, ivory collar", h:""},
+ {n:10, nom:"", mat:"Striped wool, leather facing", h:""},
+ {n:11, nom:"", mat:"Lambskin, sheer panel", h:""},
+ {n:12, nom:"", mat:"Lambskin blouson and trousers", h:""},
+ {n:13, nom:"", mat:"Wool overshirt, wide trousers", h:""},
+ {n:14, nom:"", mat:"Lambskin, belted waist", h:""},
+ {n:15, nom:"", mat:"Camel suede, long line", h:""},
+ {n:16, nom:"", mat:"Ivory wool, sleeveless gilet", h:""},
+ {n:17, nom:"", mat:"Long lambskin coat", h:""},
+ {n:18, nom:"", mat:"Long wool coat, leather trim", h:""},
+ {n:19, nom:"", mat:"Long lambskin coat, open", h:""},
+ {n:20, nom:"", mat:"White fox, short", h:""},
+ {n:21, nom:"", mat:"Patent leather, cropped set", h:""},
+ {n:22, nom:"", mat:"Wool jacket, ivory trousers", h:""}
+];
+(function(){
+  var g = document.getElementById("grille");
+  LOOKS.forEach(function(L){
+    var url = L.h ? "https://maisongodefroi.com/products/" + L.h + "?ref=pedro-da" : BOUTIQUE;
+    var a = document.createElement("a");
+    a.className = "look"; a.href = url;
+    a.target = "_blank"; a.rel = "noopener";
+    var num = ("0" + L.n).slice(-2);
+    a.innerHTML =
+      '<img class="ph" src="photos/look-' + num + '.jpg" loading="lazy" alt="' +
+        (L.nom ? L.nom + ' — ' : '') + L.mat + ', Le Défilé Héritage, Montréal">' +
+      (L.nom ? '<p class="nom">' + L.nom + '</p>' : '') +
+      '<p class="mat">' + L.mat + '</p>' +
+      '<p class="voir">See the piece</p>';
+    g.appendChild(a);
   });
-
-  function compte() {
-    var n = cartes.filter(function (c) { return !c.hidden; }).length;
-    cpt.textContent = n + (n > 1 ? " pi\u00e8ces" : " pi\u00e8ce");
-  }
-  function hero() {
-    cartes.forEach(function (c) { c.classList.remove("hero"); });
-    for (var i = 0; i < cartes.length; i++) {
-      if (!cartes[i].hidden) { cartes[i].classList.add("hero"); break; }
-    }
-  }
-  function filtre(f) {
-    g.classList.add("filtrage");
-    setTimeout(function () {
-      cartes.forEach(function (c) { c.hidden = (f !== "tout" && c.dataset.g !== f); });
-      compte(); hero();
-      g.classList.remove("filtrage");
-    }, 150);
-  }
-  [].forEach.call(document.querySelectorAll("nav button"), function (b) {
-    b.addEventListener("click", function () {
-      [].forEach.call(document.querySelectorAll("nav button"), function (o) {
-        o.setAttribute("aria-pressed", String(o === b));
-      });
-      filtre(b.dataset.f);
-    });
-  });
-
-  function majBarre() {
-    if (btxt.textContent) {
-      btxt.classList.add("change");
-      setTimeout(function () { btxt.classList.remove("change"); }, 150);
-    }
-    if (!choix.length) {
-      btxt.textContent = "Prendre rendez-vous";
-      bsel.textContent = "";
-      lien.href = "sms:" + TEL + "?&body=" + encodeURIComponent(
-        "Bonjour Pedro (Maison Godefroi), j\u2019aimerais prendre rendez-vous pour essayer la collection RADICE.");
-    } else {
-      btxt.textContent = "Essayer \u2014 " + choix.length + (choix.length > 1 ? " pi\u00e8ces" : " pi\u00e8ce");
-      bsel.textContent = choix.join(", ");
-      lien.href = "sms:" + TEL + "?&body=" + encodeURIComponent(
-        "Bonjour Pedro (Maison Godefroi), j\u2019aimerais essayer " + choix.join(", ") +
-        " de la collection RADICE." + (post ? " (" + post + ")" : ""));
-    }
-    try { sessionStorage.setItem("radice", JSON.stringify(choix)); } catch (e) {}
-  }
-
-  function peindre(carte, actif) {
-    carte.classList.toggle("on", actif);
-    var b = carte.querySelector(".s");
-    b.setAttribute("aria-pressed", String(actif));
-    b.textContent = actif ? MOINS : "+";
-  }
-  function bascule(carte) {
-    var nom = carte.dataset.n, i = choix.indexOf(nom), actif = i === -1;
-    if (actif) choix.push(nom); else choix.splice(i, 1);
-    peindre(carte, actif);
-    majBarre();
-  }
-
-  var vue = document.getElementById("vue"),
-      vimg = document.getElementById("vimg"), vnom = document.getElementById("vnom"),
-      vprix = document.getElementById("vprix"), vdesc = document.getElementById("vdesc"),
-      vaj = document.getElementById("vajouter"), vfiche = document.getElementById("vfiche"),
-      courante = null;
-
-  function libelle(carte) {
-    var on = choix.indexOf(carte.dataset.n) !== -1;
-    vaj.textContent = on ? "Retirer de ma s\u00e9lection" : "Ajouter \u00e0 ma s\u00e9lection";
-    vaj.dataset.on = on ? "1" : "0";
-  }
-  var doux = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function morph(source, faire) {
-    if (!doux || !document.startViewTransition) { faire(); return; }
-    source.style.viewTransitionName = "piece";
-    vimg.style.viewTransitionName = "piece";
-    var rendre = function () {
-      source.style.viewTransitionName = "";
-      vimg.style.viewTransitionName = "";
-    };
-    try {
-      document.startViewTransition(faire).finished.then(rendre, rendre);
-    } catch (e) { faire(); rendre(); }
-  }
-
-  var vprec = document.getElementById("vprec"),
-      vsuiv = document.getElementById("vsuiv");
-
-  function visibles() {
-    return cartes.filter(function (c) { return !c.hidden; });
-  }
-
-  function remplir(carte) {
-    courante = carte;
-    var im = carte.querySelector("img");
-    vimg.removeAttribute("srcset");
-    vimg.src = im.currentSrc || im.src;
-    vimg.alt = im.alt;
-    vnom.textContent = carte.dataset.n;
-    vprix.textContent = carte.querySelector(".pr").textContent;
-    vdesc.textContent = carte.querySelector(".d").textContent;
-    vfiche.href = carte.querySelector(".fiche").href;
-    libelle(carte);
-    var v = visibles(), i = v.indexOf(carte);
-    vprec.disabled = i <= 0;
-    vsuiv.disabled = i < 0 || i >= v.length - 1;
-  }
-
-  function glisser(pas) {
-    var v = visibles(), i = v.indexOf(courante) + pas;
-    if (i < 0 || i >= v.length) return;
-    remplir(v[i]);
-    vue.scrollTop = 0;
-  }
-
-  function ouvrir(carte) {
-    if (!vue || !vue.showModal) {
-      var f = carte.querySelector(".fiche");
-      if (f) window.open(f.href, "_blank", "noopener");
-      return;
-    }
-    remplir(carte);
-    morph(carte.querySelector("img"), function () {
-      vue.showModal();
-      vue.scrollTop = 0;
-      document.body.style.overflow = "hidden";
-    });
-  }
-  function fermer() {
-    document.body.style.overflow = "";
-    if (!vue.open) return;
-    var im = courante ? courante.querySelector("img") : null;
-    if (im) morph(im, function () { vue.close(); });
-    else vue.close();
-  }
-  if (vue) {
-    vue.addEventListener("close", function () { document.body.style.overflow = ""; });
-    vue.addEventListener("cancel", function () { document.body.style.overflow = ""; });
-    vue.addEventListener("click", function (e) { if (e.target === vue) fermer(); });
-    document.getElementById("vclose").addEventListener("click", fermer);
-    vaj.addEventListener("click", function () {
-      if (!courante) return;
-      bascule(courante);
-      libelle(courante);
-    });
-    vprec.addEventListener("click", function () { glisser(-1); });
-    vsuiv.addEventListener("click", function () { glisser(1); });
-    vue.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") glisser(-1);
-      if (e.key === "ArrowRight") glisser(1);
-    });
-    var x0 = null;
-    vimg.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-    vimg.addEventListener("touchend", function (e) {
-      if (x0 === null) return;
-      var dx = e.changedTouches[0].clientX - x0;
-      x0 = null;
-      if (Math.abs(dx) > 55) glisser(dx < 0 ? 1 : -1);
-    }, { passive: true });
-  }
-
-  g.addEventListener("click", function (e) {
-    var b = e.target.closest(".s");
-    if (b) { bascule(b.closest(".p")); return; }
-    var z = e.target.closest(".sel-zone");
-    if (z) { ouvrir(z.closest(".p")); }
-  });
-
-  try {
-    JSON.parse(sessionStorage.getItem("radice") || "[]").forEach(function (nom) {
-      var c = cartes.filter(function (x) { return x.dataset.n === nom; })[0];
-      if (c) { choix.push(nom); peindre(c, true); }
-    });
-  } catch (e) {}
-
-  var f0 = q.get("f");
-  if (f0 === "femme" || f0 === "homme") {
-    var b0 = document.querySelector('nav button[data-f="' + f0 + '"]');
-    if (b0) b0.click();
-  }
-
-  compte(); hero(); majBarre();
 })();
 </script>
 </body>
