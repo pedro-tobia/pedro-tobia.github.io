@@ -65,6 +65,17 @@ h2{font-size:26px;line-height:30px}
 .canaux a{color:var(--n5);text-decoration:none;border-bottom:1px solid var(--n2)}
 .canaux a:hover{color:var(--noir);border-color:var(--noir)}
 
+/* bloc de cloture */
+.parler{background:var(--n1);margin:78px 0 0;padding:46px 40px}
+@media(max-width:620px){.parler{padding:34px 24px;margin-top:56px}}
+.parler h2{margin:0 0 14px}
+.parler p{margin:0 0 20px;max-width:56ch;color:var(--n5);font-size:15px;line-height:21px}
+.parler .duo-b{display:flex;flex-wrap:wrap;gap:12px}
+.bt{display:inline-block;text-decoration:none;font-size:13px;line-height:18px;letter-spacing:.05em;padding:16px 26px}
+.bt-plein{background:var(--noir);color:var(--blanc)}
+.bt-vide{border:1px solid var(--noir);color:var(--noir)}
+.bt-vide:hover{background:var(--noir);color:var(--blanc)}
+
 footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:22px 0 64px;font-size:12px;line-height:18px;color:var(--n4)}
 footer a{color:var(--n4)}
 .sep{height:1px;background:var(--n2);margin:58px 0}
@@ -111,8 +122,22 @@ footer a{color:var(--n4)}
   <div class="grille" id="grille"></div>
 </section>
 
-<a class="barre" id="rdv" href="sms:+14384882168">Book an appointment</a>
-<script>(function(){var a=document.getElementById("rdv");a.href="sms:+14384882168"+(/iP(hone|ad|od)|Mac/.test(navigator.platform)?"&":"?")+"body="+encodeURIComponent("Hello Pedro \u2014 I would like to book an appointment for the RADICE collection.");})();</script>
+<section class="parler">
+  <p class="sur">Let's talk</p>
+  <h2>An appointment — or a piece that does not exist yet.</h2>
+  <p>If one of the looks above is close to what you have in mind, I can cut it on an individual pattern. And if nothing here is quite it, tell me what you are after: I draw on commission, with the atelier's leather at hand, and I take those projects on myself. It is the part of the work I like best.</p>
+  <div class="duo-b">
+    <a class="bt bt-plein" id="rdv" href="sms:+14384882168">Book an appointment</a>
+    <a class="bt bt-vide" id="projet" href="sms:+14384882168">Discuss a special project</a>
+  </div>
+</section>
+<script>(function(){
+  var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
+  function pose(id, texte){ var a=document.getElementById(id);
+    if(a) a.href = "sms:+14384882168" + sep + "body=" + encodeURIComponent(texte); }
+  pose("rdv", "Hello Pedro \u2014 I would like to book an appointment for the RADICE collection.");
+  pose("projet", "Hello Pedro \u2014 I have a special project in mind. Could we talk about it?");
+})();</script>
 
 <p class="canaux">
   Or reach me directly —
