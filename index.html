@@ -84,6 +84,18 @@ h2{font-size:26px;line-height:30px}
 .tri button{font:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
   padding:9px 16px;border:1px solid var(--n2);background:var(--blanc);color:var(--n5);cursor:pointer}
 .tri button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
+.agenda{margin:26px 0 0}
+.agenda .lab{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--n4);margin:0 0 12px}
+.jours,.heures{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.jours button,.heures button{font:inherit;font-size:13px;line-height:17px;padding:11px 15px;
+  border:1px solid var(--n2);background:var(--blanc);color:var(--noir);cursor:pointer;text-align:center}
+.jours button span{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--n4);margin-top:3px}
+.jours button.on,.heures button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
+.jours button.on span{color:var(--n2)}
+.heures:empty{display:none}
+.choisi{margin:0 0 16px;font-size:14px;line-height:20px;color:var(--n5)}
+.choisi.pret{color:var(--noir);font-weight:600}
+#confirmer[aria-disabled="true"]{background:var(--n2);color:var(--n4);pointer-events:none}
 
 footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:22px 0 64px;font-size:12px;line-height:18px;color:var(--n4)}
 footer a{color:var(--n4)}
@@ -112,8 +124,7 @@ footer a{color:var(--n4)}
     <p class="sur">Pedro Tobia · Artistic Director</p>
     <h1>I cut for one body at a time.</h1>
     <p class="taille">The house carries its own standard sizes. When they do not work &mdash; and on a defenceman&rsquo;s shoulders they often do not &mdash; the pattern is cut on the man, at the same price. Every stage of the making happens in our own ateliers in Montr&eacute;al, which is why there is no size we cannot cut.</p>
-    <p style="margin-top:22px">I was born in Toulouse, in the south of France. I came to clothing through people rather than through school — as a celebrity stylist in Paris, working independently with artists signed to Sony, Warner Music, Believe and Rec. 118. Dressing someone who will be photographed all night teaches you one thing quickly: a garment either holds the body or it does not, and no amount of styling hides the difference.</p>
-    <p>Today I am artistic director of Maison Godefroi, in Montréal, and creative consultant on its collections. I draw the pieces, I choose the materials, and I am in the atelier when they are cut.</p>
+    <p style="margin-top:22px">Born in Toulouse, I dressed artists in Paris before Montr&eacute;al. It teaches you one thing fast: a garment either holds the body or it does not, and no styling hides the difference. Today I draw RADICE for Maison Godefroi, choose the materials, and I am in the atelier when the pieces are cut.</p>
   </div>
 </section>
 
@@ -122,9 +133,8 @@ footer a{color:var(--n4)}
 <section>
   <p class="sur">The collection</p>
   <h2>RADICE — root, in Italian.</h2>
-  <p style="margin:20px 0 0;max-width:62ch">A root is what holds, and what you do not see. The collection is built the same way: the work is in the pattern, the seam and the lining, not in a monogram on the outside. Thirty-one looks were shown on 19 September 2026 at La Passerelle, in Montréal's Old Port, for the Héritage show.</p>
-  <p style="margin:15px 0 0;max-width:62ch">We source on a tight circuit, on very precise points, and we judge a material on one criterion: purity. One hundred per cent natural compositions — merino wool, lambskin, cashmere, suede, silk. No synthetics anywhere in the collection. That is a constraint we chose, and it is the reason the pieces age the way they do.</p>
-  <p style="margin:15px 0 0;max-width:62ch">Everything is cut and sewn by hand in Montréal. Ten working days from the measurements to the delivery — made to measure, or in the house's standard sizes.</p>
+  <p style="margin:20px 0 0;max-width:62ch">A root is what holds, and what you do not see. The work is in the pattern, the seam and the lining, not in a monogram on the outside. Thirty-one looks were shown on 19 September 2026 at La Passerelle, in Montréal&rsquo;s Old Port.</p>
+  <p style="margin:15px 0 0;max-width:62ch">One criterion on materials: purity. Merino wool, lambskin, cashmere, suede, silk &mdash; one hundred per cent natural, no synthetics anywhere. Everything cut and sewn by hand in Montréal.</p>
 </section>
 
 
@@ -143,21 +153,17 @@ footer a{color:var(--n4)}
 
 <section class="parler">
   <p class="sur">Let's talk</p>
-  <h2>An appointment — or a piece that does not exist yet.</h2>
-  <p>If one of the looks above is close to what you have in mind, I can cut it on an individual pattern. And if nothing here is quite it, tell me what you are after: I draw on commission, with the atelier's leather at hand, and I take those projects on myself. It is the part of the work I like best.</p>
-  <div class="duo-b">
-    <a class="bt bt-plein" id="rdv" href="mailto:pedro@maisongodefroi.com">Book an appointment</a>
-    <a class="bt bt-vide" id="projet" href="mailto:pedro@maisongodefroi.com">Discuss a special project</a>
+  <h2>Twenty minutes, and you will know.</h2>
+  <p>Bring me a name and the measurement that never works &mdash; the 6&prime;5&Prime; frame, the 52-inch chest, the shoulders nothing closes over. On the call I tell you straight whether we cut from our standard sizes or draw a new pattern, what it costs (the same), and what the ten days look like. If the piece your client wants does not exist yet, I draw it.</p>
+  <div class="agenda" id="agenda">
+    <p class="lab">Pick a time &mdash; Montr&eacute;al time</p>
+    <div class="jours" id="jours"></div>
+    <div class="heures" id="heures"></div>
+    <p class="choisi" id="choisi">Choose a day, then a time.</p>
+    <a class="bt bt-plein" id="confirmer" href="mailto:pedro@maisongodefroi.com" aria-disabled="true">Confirm this time</a>
   </div>
-  <p class="aussi">Or <a id="sms1" href="sms:+14384882168">send me a text</a> · <a href="tel:+14384882168">call 438 488 2168</a></p>
+  <p class="aussi">Something else in mind? <a id="projet" href="mailto:pedro@maisongodefroi.com">Discuss a special project</a> &middot; or <a id="sms1" href="sms:+14384882168">send me a text</a> &middot; <a href="tel:+14384882168">call 438 488 2168</a></p>
 </section>
-<script>(function(){
-  var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
-  function pose(id, texte){ var a=document.getElementById(id);
-    if(a) a.href = "sms:+14384882168" + sep + "body=" + encodeURIComponent(texte); }
-  pose("rdv", "Hello Pedro \u2014 I would like to book an appointment for the RADICE collection.");
-  pose("projet", "Hello Pedro \u2014 I have a special project in mind. Could we talk about it?");
-})();</script>
 
 <p class="canaux">
   Or reach me directly —
@@ -230,18 +236,63 @@ var LOOKS = [
   peindre();
 
   var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
-  var M = {
-    rdv:    ["An appointment \u2014 RADICE", "Hello Pedro,\n\nI would like to book an appointment for the RADICE collection.\n\n"],
-    projet: ["A special project", "Hello Pedro,\n\nI have a special project in mind. Could we talk about it?\n\n"]
-  };
-  Object.keys(M).forEach(function(id){
-    var a = document.getElementById(id); if(!a) return;
-    a.href = "mailto:pedro@maisongodefroi.com?subject=" + encodeURIComponent(M[id][0]) +
-             "&body=" + encodeURIComponent(M[id][1]);
-  });
+  var ADR = "pedro@maisongodefroi.com";
+  var JOURS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var MOIS  = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var HEURES = ["10:00","14:00","17:00"];
+  var bJ = document.getElementById("jours"), bH = document.getElementById("heures");
+  var txt = document.getElementById("choisi"), ok = document.getElementById("confirmer");
+  var jour = null, heure = null;
+
+  function maj(){
+    if (jour && heure) {
+      var c = jour + " at " + heure + " (Montreal time)";
+      txt.textContent = c; txt.classList.add("pret");
+      ok.removeAttribute("aria-disabled");
+      ok.href = "mailto:" + ADR + "?subject=" + encodeURIComponent("Appointment — " + c) +
+        "&body=" + encodeURIComponent("Hello Pedro,\n\nI would like to meet on " + c +
+        ".\n\nName:\nCompany:\nWho I am dressing:\n\n");
+    } else if (jour) {
+      txt.textContent = jour + " — now pick a time.";
+      txt.classList.remove("pret"); ok.setAttribute("aria-disabled","true");
+    }
+  }
+
+  if (bJ) {
+    var d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate()+1);
+    var n = 0;
+    while (n < 10) {
+      if (d.getDay() !== 0 && d.getDay() !== 6) {
+        var b = document.createElement("button"); b.type = "button";
+        b.innerHTML = d.getDate() + " " + MOIS[d.getMonth()].slice(0,3) +
+                      "<span>" + JOURS[d.getDay()].slice(0,3) + "</span>";
+        b.dataset.lib = JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear();
+        bJ.appendChild(b); n++;
+      }
+      d.setDate(d.getDate()+1);
+    }
+    bJ.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      jour = b.dataset.lib; heure = null;
+      [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
+      bH.innerHTML = "";
+      HEURES.forEach(function(h){ var k=document.createElement("button"); k.type="button"; k.textContent=h; bH.appendChild(k); });
+      maj();
+    });
+    bH.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      heure = b.textContent;
+      [].forEach.call(bH.children, function(x){ x.classList.toggle("on", x === b); });
+      maj();
+    });
+  }
+
+  var pr = document.getElementById("projet");
+  if (pr) pr.href = "mailto:" + ADR + "?subject=" + encodeURIComponent("A special project") +
+    "&body=" + encodeURIComponent("Hello Pedro,\n\nI have a special project in mind. Could we talk about it?\n\n");
   var t = document.getElementById("sms1");
-  if(t) t.href = "sms:+14384882168" + sep + "body=" +
-    encodeURIComponent("Hello Pedro \u2014 I saw the RADICE collection.");
+  if (t) t.href = "sms:+14384882168" + sep + "body=" +
+    encodeURIComponent("Hello Pedro — I saw the RADICE collection.");
 })();</script>
 
 <!-- Mesure d'audience sans cookie ni donnee personnelle -->
