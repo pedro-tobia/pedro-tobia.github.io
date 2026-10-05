@@ -46,7 +46,7 @@ p:last-child{margin-bottom:0}
 .leg{margin:12px 0 0;font-size:13px;line-height:19px;color:var(--n4);max-width:70ch}
 
 /* les cinq faits */
-.faits{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--n2);
+.faits{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--n2);
   border-top:1px solid var(--n2);border-bottom:1px solid var(--n2);margin:48px 0 0}
 @media(max-width:900px){.faits{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:440px){.faits{grid-template-columns:1fr}}
@@ -129,13 +129,19 @@ footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:24px 0 64px;font-s
 footer .logo{width:132px;margin-bottom:20px}
 footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
 
-/* bascule de langue */
-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.langue{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;min-height:40px;
-  border:1px solid var(--n2);color:var(--n5);text-decoration:none;
-  font-size:12px;font-weight:600;letter-spacing:.1em}
-.langue svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4}
-.langue:hover,.langue:focus-visible{border-color:var(--noir);color:var(--noir)}
+/* en-tete collant : la bascule de langue reste atteignable partout */
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 0;background:var(--blanc);border-bottom:1px solid var(--n2)}
+.langue{display:inline-flex;align-items:center;border:1px solid var(--n2);background:var(--blanc)}
+.langue span,.langue a{display:inline-flex;align-items:center;justify-content:center;
+  min-width:46px;min-height:38px;padding:0 12px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-decoration:none}
+.langue span{background:var(--noir);color:var(--blanc)}
+.langue a{color:var(--n5)}
+.langue a:hover,.langue a:focus-visible{background:var(--n1);color:var(--noir)}
+@media(max-width:620px){
+  .langue span,.langue a{min-width:42px;min-height:36px;padding:0 10px;font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -144,14 +150,15 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
 <header>
   <img class="couteau" src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/godefroi-couteau-marque.png?v=1790719098&amp;width=240" alt="Maison Godefroi">
-  <a class="langue" href="../" lang="fr" aria-label="Afficher cette page en français">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.3 9h17.4M3.3 15h17.4"/></svg>FR</a>
+  <div class="langue" role="group" aria-label="Page language">
+    <a href="../" lang="fr" aria-label="Lire cette page en français">FR</a><span lang="en" aria-current="true">EN</span>
+  </div>
 </header>
 
 <section class="ouverture">
   <p class="sur">Maison Godefroi &middot; RADICE collection, autumn winter 2026</p>
-  <h1><span>Every wardrobe deserves one signature piece.</span><span>We cut hers.</span></h1>
-  <p class="appui">Leather, silk and cashmere from the finest Italian tanneries. Cut by hand at 283&nbsp;Notre-Dame Street West, ready-to-wear or on her own pattern, at no extra cost. Delivered in ten working days.</p>
+  <h1><span>Every wardrobe deserves one signature piece.</span><span>We cut theirs.</span></h1>
+  <p class="appui">Leather, silk and cashmere from the finest Italian tanneries. Cut by hand at 283&nbsp;Notre-Dame Street West, ready-to-wear or on your client's own pattern, at no extra cost. Delivered in ten working days.</p>
 </section>
 
 <div class="bande">
@@ -164,6 +171,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
   <div class="fait"><dt>Size</dt><dd>Standard or made to measure<span>No extra cost</span></dd></div>
   <div class="fait"><dt>Materials</dt><dd>Italian tanneries<span>Leather, silk, cashmere, 100 % natural</span></dd></div>
   <div class="fait"><dt>Made in</dt><dd>Montréal</dd></div>
+  <div class="fait"><dt>Measurements</dt><dd>At the showroom or remotely<span>We take them together, point by point</span></dd></div>
   <div class="fait"><dt>Price</dt><dd>$1,200 to $7,000<span>Median of the collection at $2,400</span></dd></div>
 </dl>
 
@@ -184,7 +192,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
 <section class="promesse">
   <p class="fort">Your client stays yours.</p>
-  <p style="margin-top:12px">I never contact her without you, and she goes on no mailing list. You remain the point of contact, from the first fitting to the delivery.</p>
+  <p style="margin-top:12px">I never contact them without you, and they go on no mailing list. You remain the only link, from the first fitting to the delivery.</p>
 </section>
 
 <div class="sep"></div>
@@ -244,7 +252,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
       <label>Your practice, boutique or agency<input id="f-maison" type="text" autocomplete="organization"></label>
       <label>Email<input id="f-mail" type="email" autocomplete="email" inputmode="email" required></label>
       <label>Phone<input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"></label>
-      <label class="plein">Who are you dressing&nbsp;?<input id="f-qui" type="text" placeholder="Private clients, executives, shoots, galas"></label>
+      <label class="plein">Who are you dressing&nbsp;?<input id="f-qui" type="text" placeholder="Private clients, executives, artists, shoots, galas"></label>
       <label class="plein">Anything to look at first&nbsp;?<textarea id="f-note" rows="3" placeholder="A piece from the collection, a measurement that never works, a project you have in mind"></textarea></label>
       <fieldset class="plein">
         <legend>Where</legend>

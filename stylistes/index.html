@@ -46,7 +46,7 @@ p:last-child{margin-bottom:0}
 .leg{margin:12px 0 0;font-size:13px;line-height:19px;color:var(--n4);max-width:70ch}
 
 /* les cinq faits */
-.faits{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--n2);
+.faits{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--n2);
   border-top:1px solid var(--n2);border-bottom:1px solid var(--n2);margin:48px 0 0}
 @media(max-width:900px){.faits{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:440px){.faits{grid-template-columns:1fr}}
@@ -129,13 +129,19 @@ footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:24px 0 64px;font-s
 footer .logo{width:132px;margin-bottom:20px}
 footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
 
-/* bascule de langue */
-header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.langue{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;min-height:40px;
-  border:1px solid var(--n2);color:var(--n5);text-decoration:none;
-  font-size:12px;font-weight:600;letter-spacing:.1em}
-.langue svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4}
-.langue:hover,.langue:focus-visible{border-color:var(--noir);color:var(--noir)}
+/* en-tete collant : la bascule de langue reste atteignable partout */
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 0;background:var(--blanc);border-bottom:1px solid var(--n2)}
+.langue{display:inline-flex;align-items:center;border:1px solid var(--n2);background:var(--blanc)}
+.langue span,.langue a{display:inline-flex;align-items:center;justify-content:center;
+  min-width:46px;min-height:38px;padding:0 12px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-decoration:none}
+.langue span{background:var(--noir);color:var(--blanc)}
+.langue a{color:var(--n5)}
+.langue a:hover,.langue a:focus-visible{background:var(--n1);color:var(--noir)}
+@media(max-width:620px){
+  .langue span,.langue a{min-width:42px;min-height:36px;padding:0 10px;font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -144,14 +150,15 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
 <header>
   <img class="couteau" src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/godefroi-couteau-marque.png?v=1790719098&amp;width=240" alt="Maison Godefroi">
-  <a class="langue" href="en/" lang="en" aria-label="Switch to English">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.3 9h17.4M3.3 15h17.4"/></svg>EN</a>
+  <div class="langue" role="group" aria-label="Langue de la page">
+    <span lang="fr" aria-current="true">FR</span><a href="en/" lang="en" aria-label="Read this page in English">EN</a>
+  </div>
 </header>
 
 <section class="ouverture">
   <p class="sur">Maison Godefroi &middot; Collection RADICE, automne hiver 2026</p>
   <h1><span>Chaque garde-robe mérite une pièce signature.</span><span>Nous coupons la sienne.</span></h1>
-  <p class="appui">Cuir, soie et cachemire des meilleures tanneries italiennes. Coupés à la main au 283&nbsp;rue Notre-Dame Ouest, en prêt-à-porter ou sur son patron, sans supplément. Livrés en dix jours ouvrables.</p>
+  <p class="appui">Cuir, soie et cachemire des meilleures tanneries italiennes. Coupés à la main au 283&nbsp;rue Notre-Dame Ouest, en prêt-à-porter ou sur le patron de votre client, sans supplément. Livrés en dix jours ouvrables.</p>
 </section>
 
 <div class="bande">
@@ -164,6 +171,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
   <div class="fait"><dt>Taille</dt><dd>Standards ou sur-mesure<span>Pas de frais supplémentaires</span></dd></div>
   <div class="fait"><dt>Matières</dt><dd>Tanneries d'Italie<span>Cuir, soie, cachemire, 100 % naturelles</span></dd></div>
   <div class="fait"><dt>Fabrication</dt><dd>Montréal</dd></div>
+  <div class="fait"><dt>Mesures</dt><dd>Au showroom ou à distance<span>Nous les reprenons ensemble, point par point</span></dd></div>
   <div class="fait"><dt>Prix</dt><dd>1 200 à 7 000 $<span>Médiane de la collection à 2 400 $</span></dd></div>
 </dl>
 
@@ -183,8 +191,8 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 <div class="sep"></div>
 
 <section class="promesse">
-  <p class="fort">Votre cliente reste la vôtre.</p>
-  <p style="margin-top:12px">Je ne la recontacte jamais sans vous, et elle n'entre dans aucune liste d'envoi. Vous restez l'interlocutrice, du premier essayage à la livraison.</p>
+  <p class="fort">Vos clients restent les vôtres.</p>
+  <p style="margin-top:12px">Je ne les recontacte jamais sans vous, et ils n'entrent dans aucune liste d'envoi. Vous restez le seul lien, du premier essayage à la livraison.</p>
 </section>
 
 <div class="sep"></div>
@@ -192,7 +200,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 <section class="matieres">
   <p class="sur">Les matières</p>
   <h2>Six cuirs, trois fourrures, trois laines.</h2>
-  <p style="margin-top:16px;max-width:58ch">Cuir, soie et cachemire issus des meilleures tanneries et ateliers d'Italie. Cent pour cent naturelles, aucune synthétique dans la collection. Voici de quoi juger de près, à l'échelle où vos clientes regardent.</p>
+  <p style="margin-top:16px;max-width:58ch">Cuir, soie et cachemire issus des meilleures tanneries et ateliers d'Italie. Cent pour cent naturelles, aucune synthétique dans la collection. Voici de quoi juger de près, à l'échelle où vos clients regardent.</p>
 
   <div class="mur">
     <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_macro.png?v=1790114752&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière&nbsp;: suède noir, pièce STELLA"
@@ -244,7 +252,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px}
       <label>Votre pratique, boutique ou agence<input id="f-maison" type="text" autocomplete="organization"></label>
       <label>Courriel<input id="f-mail" type="email" autocomplete="email" inputmode="email" required></label>
       <label>Téléphone<input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"></label>
-      <label class="plein">Qui habillez-vous&nbsp;?<input id="f-qui" type="text" placeholder="Clientes privées, dirigeants, tournages, galas"></label>
+      <label class="plein">Qui habillez-vous&nbsp;?<input id="f-qui" type="text" placeholder="Clients privés, dirigeants, artistes, tournages, galas"></label>
       <label class="plein">Quelque chose à regarder en priorité&nbsp;?<textarea id="f-note" rows="3" placeholder="Une pièce de la collection, une mesure qui ne passe jamais, un projet que vous avez en tête"></textarea></label>
       <fieldset class="plein">
         <legend>Où</legend>
