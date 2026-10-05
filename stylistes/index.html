@@ -111,6 +111,17 @@ p:last-child{margin-bottom:0}
   .heures button{flex:1 0 calc(33.333% - 6px);min-width:0}
 }
 
+/* mur de matieres */
+.matieres{margin:0}
+.mur{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:30px 0 0}
+@media(max-width:860px){.mur{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media(max-width:560px){.mur{grid-template-columns:repeat(2,1fr);gap:12px}}
+.mur figure{margin:0}
+.mur img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--n1)}
+.mur figcaption{margin-top:9px;font-size:13px;line-height:17px;font-weight:600;letter-spacing:-.005em}
+.mur figcaption span{display:block;margin-top:2px;font-size:11px;line-height:15px;font-weight:400;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--n4)}
+
 footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:24px 0 64px;font-size:13px;line-height:19px;color:var(--n5)}
 footer .logo{width:132px;margin-bottom:20px}
 footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
@@ -163,10 +174,40 @@ footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
   <p style="margin-top:12px">Je ne la recontacte jamais sans vous, et elle n'entre dans aucune liste d'envoi. Vous restez l'interlocutrice, du premier essayage à la livraison.</p>
 </section>
 
-<div class="bande">
-  <img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/MACRO_CUIR_VERNI_ZIP_1200.jpg?v=1791232297&amp;width=1200" alt="Macro du cuir d'agneau verni noir, fermeture métal et surpiqûres apparentes" width="1200" height="1200">
-  <p class="leg">Cuir d'agneau verni, fermeture métal, surpiqûres apparentes. Et si rien dans la collection ne correspond, je dessine&nbsp;: nous avons l'inventaire de cuir de la maison sous la main, et je prends ces projets moi-même.</p>
-</div>
+<section class="matieres">
+  <p class="sur">Les matières</p>
+  <h2>Six cuirs, trois fourrures, trois laines.</h2>
+  <p style="margin-top:16px;max-width:56ch">Une seule exigence&nbsp;: la pureté. Cent pour cent naturelles, aucune synthétique dans la collection. Voici de quoi juger de près, à l'échelle où vos clientes regardent.</p>
+
+  <div class="mur">
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/blouson_suede_macro.png?v=1790114752&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : suède noir, pièce STELLA"
+      width="520" height="520" loading="lazy"><figcaption>Suède noir<span>STELLA</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/12_VALERIE__2_macro_noir.png?v=1790115516&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cuir d’agneau, pièce VALÉRIE"
+      width="520" height="520" loading="lazy"><figcaption>Cuir d’agneau<span>VALÉRIE</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-longue-veau-facon-poulain-noir__2_macro.jpg?v=1790114928&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cuir façon poulain, pièce ROSELYNE"
+      width="520" height="520" loading="lazy"><figcaption>Cuir façon poulain<span>ROSELYNE</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/13_SALOME__2_macro.png?v=1790115516&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cuir façon croco, pièce SALOMÉ"
+      width="520" height="520" loading="lazy"><figcaption>Cuir façon croco<span>SALOMÉ</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/salome-cuir-vieilli-rouge__2_macro.jpg?v=1790881246&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cuir vieilli, pièce SALOMÉ"
+      width="520" height="520" loading="lazy"><figcaption>Cuir vieilli<span>SALOMÉ</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-courte-vernis-bordeaux__2_macro.jpg?v=1790114929&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cuir verni rouge cerise, pièce JEANNE"
+      width="520" height="520" loading="lazy"><figcaption>Cuir verni rouge cerise<span>JEANNE</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/29_ANTONIN__2_macro.png?v=1790115661&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : shearling, pièce ANTONIN"
+      width="520" height="520" loading="lazy"><figcaption>Shearling<span>ANTONIN</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/manteau-renard-blanc__2_macro.jpg?v=1790114929&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : renard blanc, pièce AMY"
+      width="520" height="520" loading="lazy"><figcaption>Renard blanc<span>AMY</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/veste-renard-noir__2_macro.jpg?v=1790114929&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : renard noir, pièce LILY"
+      width="520" height="520" loading="lazy"><figcaption>Renard noir<span>LILY</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/17_LEON__2_macro.png?v=1790115660&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : laine mérinos et cuir, pièce LÉON"
+      width="520" height="520" loading="lazy"><figcaption>Laine mérinos et cuir<span>LÉON</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/20_AURELE__3_macro.png?v=1790115963&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : cachemire, pièce AURÈLE"
+      width="520" height="520" loading="lazy"><figcaption>Cachemire<span>AURÈLE</span></figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/HENRI_blouson_laine_greige_4_macro.jpg?v=1790116038&amp;width=520&amp;height=520&amp;crop=center" alt="Macro de la matière : lainage greige, pièce HENRI"
+      width="520" height="520" loading="lazy"><figcaption>Lainage greige<span>HENRI</span></figcaption></figure>
+  </div>
+
+  <p class="leg" style="margin-top:22px">Et si rien ici ne correspond, je dessine&nbsp;: nous avons l'inventaire de cuir de la maison sous la main, et je prends ces projets moi-même.</p>
+</section>
 
 <div class="sep"></div>
 
