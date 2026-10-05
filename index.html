@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pedro Tobia — RADICE, Maison Godefroi</title>
+<title>Pedro Tobia · RADICE, Maison Godefroi</title>
 <meta name="description" content="Pedro Tobia, artistic director of the RADICE collection for Maison Godefroi. Made to measure, by hand, in Montréal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,18 +84,50 @@ h2{font-size:26px;line-height:30px}
 .tri button{font:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
   padding:9px 16px;border:1px solid var(--n2);background:var(--blanc);color:var(--n5);cursor:pointer}
 .tri button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
-.agenda{margin:26px 0 0}
-.agenda .lab{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--n4);margin:0 0 12px}
-.jours,.heures{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
-.jours button,.heures button{font:inherit;font-size:13px;line-height:17px;padding:11px 15px;
-  border:1px solid var(--n2);background:var(--blanc);color:var(--noir);cursor:pointer;text-align:center}
-.jours button span{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--n4);margin-top:3px}
+.agenda{margin:30px 0 0}
+.lab{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--n5);margin:26px 0 12px}
+.lab:first-child{margin-top:0}
+.lab b{flex:0 0 auto;width:19px;height:19px;border-radius:50%;background:var(--noir);color:var(--blanc);
+  font-size:10px;font-weight:600;letter-spacing:0;display:flex;align-items:center;justify-content:center}
+.lab .fuseau{font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--n4)}
+.defile{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 4px;padding-bottom:4px}
+.jours,.heures{display:flex;gap:8px}
+.jours{flex-wrap:nowrap}
+.heures{flex-wrap:wrap}
+.jours button,.heures button{flex:0 0 auto;font:inherit;font-size:13px;line-height:17px;
+  min-height:44px;padding:9px 14px;border:1px solid var(--n2);background:var(--blanc);color:var(--noir);
+  cursor:pointer;text-align:center;white-space:nowrap}
+.jours button{min-width:62px}
+.heures button{min-width:66px;font-variant-numeric:tabular-nums}
+.jours button span{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--n4);margin-top:2px}
 .jours button.on,.heures button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
 .jours button.on span{color:var(--n2)}
-.heures:empty{display:none}
-.choisi{margin:0 0 16px;font-size:14px;line-height:20px;color:var(--n5)}
+.heures .vide{margin:0;padding:12px 0;font-size:13px;color:var(--n4)}
+.champs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.champs label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--n5)}
+.champs .plein{grid-column:1/-1}
+.champs input,.champs textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;
+  font:inherit;font-size:15px;line-height:21px;letter-spacing:0;text-transform:none;color:var(--noir);
+  padding:11px 12px;border:1px solid var(--n2);border-radius:0;background:var(--blanc);-webkit-appearance:none}
+.champs textarea{resize:vertical;min-height:76px}
+.champs input:focus,.champs textarea:focus{outline:2px solid var(--noir);outline-offset:-2px;border-color:var(--noir)}
+.champs input.manque{border-color:#8c3a2b}
+.champs fieldset{grid-column:1/-1;margin:0;padding:0;border:0}
+.champs legend{padding:0;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--n5)}
+.champs .radio{display:flex;align-items:center;gap:9px;margin-top:9px;font-size:15px;font-weight:400;
+  letter-spacing:0;text-transform:none;color:var(--noir);cursor:pointer}
+.champs .radio input{width:auto;margin:0;-webkit-appearance:auto;appearance:auto}
+.choisi{margin:26px 0 14px;font-size:15px;line-height:21px;color:var(--n5)}
 .choisi.pret{color:var(--noir);font-weight:600}
-#confirmer[aria-disabled="true"]{background:var(--n2);color:var(--n4);pointer-events:none}
+.choisi.erreur{color:#8c3a2b}
+#confirmer{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+#confirmer[aria-disabled="true"]{background:var(--n2);border-color:var(--n2);color:var(--n4)}
+.fine{margin:12px 0 0;font-size:12px;line-height:18px;color:var(--n4);max-width:56ch}
+@media (max-width:560px){
+  .champs{grid-template-columns:1fr}
+  .heures button{flex:1 0 calc(33.333% - 6px);min-width:0}
+}
 
 footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:22px 0 64px;font-size:12px;line-height:18px;color:var(--n4)}
 footer a{color:var(--n4)}
@@ -115,7 +147,7 @@ footer a{color:var(--n4)}
   <div class="fait"><dt>Fit</dt><dd>Standard, or cut on you<span>Made to measure, no supplement</span></dd></div>
   <div class="fait"><dt>Materials</dt><dd>100 % natural<span>No synthetics in the collection</span></dd></div>
   <div class="fait"><dt>Made in</dt><dd>Montréal<span>By hand, in our atelier</span></dd></div>
-  <div class="fait"><dt>Measurements</dt><dd>Online — or I travel<span>For several players, I come to you</span></dd></div>
+  <div class="fait"><dt>Measurements</dt><dd>Online, or I travel<span>For several players, I come to you</span></dd></div>
 </dl>
 
 <section class="duo">
@@ -123,7 +155,7 @@ footer a{color:var(--n4)}
   <div>
     <p class="sur">Pedro Tobia · Artistic Director</p>
     <h1>I cut for one body at a time.</h1>
-    <p class="taille">The house carries its own standard sizes. When they do not work &mdash; and on a defenceman&rsquo;s shoulders they often do not &mdash; the pattern is cut on the man, at the same price. Every stage of the making happens in our own ateliers in Montr&eacute;al, which is why there is no size we cannot cut.</p>
+    <p class="taille">The house carries its own standard sizes. When they do not work, and on a defenceman&rsquo;s shoulders they often do not, the pattern is cut on the man, at the same price. Every stage of the making happens in our own ateliers in Montr&eacute;al, which is why there is no size we cannot cut.</p>
     <p style="margin-top:22px">Born in Toulouse, I dressed artists in Paris before Montr&eacute;al. It teaches you one thing fast: a garment either holds the body or it does not, and no styling hides the difference. Today I draw RADICE for Maison Godefroi, choose the materials, and I am in the atelier when the pieces are cut.</p>
   </div>
 </section>
@@ -132,9 +164,9 @@ footer a{color:var(--n4)}
 
 <section>
   <p class="sur">The collection</p>
-  <h2>RADICE — root, in Italian.</h2>
+  <h2>RADICE, root in Italian.</h2>
   <p style="margin:20px 0 0;max-width:62ch">A root is what holds, and what you do not see. The work is in the pattern, the seam and the lining, not in a monogram on the outside. Thirty-one looks were shown on 19 September 2026 at La Passerelle, in Montréal&rsquo;s Old Port.</p>
-  <p style="margin:15px 0 0;max-width:62ch">One criterion on materials: purity. Merino wool, lambskin, cashmere, suede, silk &mdash; one hundred per cent natural, no synthetics anywhere. Everything cut and sewn by hand in Montréal.</p>
+  <p style="margin:15px 0 0;max-width:62ch">One criterion on materials: purity. Merino wool, lambskin, cashmere, suede, silk. One hundred per cent natural, no synthetics anywhere. Everything cut and sewn by hand in Montréal.</p>
 </section>
 
 
@@ -154,26 +186,46 @@ footer a{color:var(--n4)}
 <section class="parler">
   <p class="sur">Let's talk</p>
   <h2>Twenty minutes, and you will know.</h2>
-  <p>Bring me a name and the measurement that never works &mdash; the 6&prime;5&Prime; frame, the 52-inch chest, the shoulders nothing closes over. On the call I tell you straight whether we cut from our standard sizes or draw a new pattern, what it costs (the same), and what the ten days look like. If the piece your client wants does not exist yet, I draw it.</p>
+  <p>Bring me a name and the measurement that never works: the 6&prime;5&Prime; frame, the 52-inch chest, the shoulders nothing closes over. On the call I tell you straight whether we cut from our standard sizes or draw a new pattern, what it costs (the same), and what the ten days look like. If the piece your client wants does not exist yet, I draw it.</p>
   <div class="agenda" id="agenda">
-    <p class="lab">Pick a time &mdash; Montr&eacute;al time</p>
-    <div class="jours" id="jours"></div>
-    <div class="heures" id="heures"></div>
-    <p class="choisi" id="choisi">Choose a day, then a time.</p>
-    <a class="bt bt-plein" id="confirmer" href="mailto:pedro@maisongodefroi.com" aria-disabled="true">Confirm this time</a>
+
+    <p class="lab"><b>1</b> Pick a day</p>
+    <div class="defile"><div class="jours" id="jours"></div></div>
+
+    <p class="lab"><b>2</b> Pick a time <span class="fuseau">Montr&eacute;al time</span></p>
+    <div class="defile"><div class="heures" id="heures"><p class="vide">Choose a day first.</p></div></div>
+
+    <p class="lab"><b>3</b> Who am I meeting?</p>
+    <div class="champs">
+      <label>Your name<input id="f-nom" type="text" autocomplete="name" required></label>
+      <label>Boutique, agency, or independent<input id="f-maison" type="text" autocomplete="organization"></label>
+      <label>Email<input id="f-mail" type="email" autocomplete="email" inputmode="email" required></label>
+      <label>Phone<input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"></label>
+      <label class="plein">Who are you dressing?<input id="f-qui" type="text" placeholder="A private client, a team, a shoot, yourself"></label>
+      <label class="plein">Anything I should look at first?<textarea id="f-note" rows="3" placeholder="A piece from the collection, a measurement that never works, a project you have in mind"></textarea></label>
+      <fieldset class="plein">
+        <legend>Where</legend>
+        <label class="radio"><input type="radio" name="lieu" value="Showroom, 283 Notre-Dame Ouest" checked> Showroom, 283 Notre-Dame Ouest</label>
+        <label class="radio"><input type="radio" name="lieu" value="Video call"> Video call</label>
+      </fieldset>
+    </div>
+
+    <p class="choisi" id="choisi">Pick a day and a time to continue.</p>
+    <a class="bt bt-plein" id="confirmer" href="#agenda" aria-disabled="true">Send this request</a>
+    <p class="fine">This opens your mail app with everything already written, addressed to pedro@maisongodefroi.com. Nothing leaves your computer until you press send.</p>
   </div>
   <p class="aussi">Something else in mind? <a id="projet" href="mailto:pedro@maisongodefroi.com">Discuss a special project</a> &middot; or <a id="sms1" href="sms:+14384882168">send me a text</a> &middot; <a href="tel:+14384882168">call 438 488 2168</a></p>
 </section>
 
 <p class="canaux">
-  Or reach me directly —
+  Or reach me directly:
   <a href="sms:+14384882168">text 438 488 2168</a> ·
   <a href="tel:+14384882168">call 438 488 2168</a> ·
   <a href="https://ig.me/m/maisongodefroi?utm_source=pedro-tobia&utm_medium=page-rdv&utm_campaign=radice-fw26" target="_blank" rel="noopener">Instagram</a>
 </p>
 
 <footer>
-  Pedro Tobia · Artistic Director, RADICE collection — Maison Godefroi<br>
+  Pedro Tobia · Artistic Director, RADICE collection · Maison Godefroi<br>
   283 Notre-Dame Street West, Montréal, Quebec H2Y 1T7 ·
   <a href="mailto:pedro@maisongodefroi.com">pedro@maisongodefroi.com</a> ·
   <a href="https://www.instagram.com/maisongodefroi/" target="_blank" rel="noopener">@maisongodefroi</a><br>
@@ -239,60 +291,112 @@ var LOOKS = [
   var ADR = "pedro@maisongodefroi.com";
   var JOURS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   var MOIS  = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  var HEURES = ["10:00","14:00","17:00"];
   var bJ = document.getElementById("jours"), bH = document.getElementById("heures");
   var txt = document.getElementById("choisi"), ok = document.getElementById("confirmer");
   var jour = null, heure = null;
 
-  function maj(){
+  function val(id){ var e = document.getElementById(id); return e ? e.value.trim() : ""; }
+
+  function dire(m, cls){
+    txt.textContent = m;
+    txt.className = "choisi" + (cls ? " " + cls : "");
+  }
+
+  function etat(){
     if (jour && heure) {
-      var c = jour + " at " + heure + " (Montreal time)";
-      txt.textContent = c; txt.classList.add("pret");
+      dire(jour + " at " + heure + ", Montreal time.", "pret");
       ok.removeAttribute("aria-disabled");
-      ok.href = "mailto:" + ADR + "?subject=" + encodeURIComponent("Appointment — " + c) +
-        "&body=" + encodeURIComponent("Hello Pedro,\n\nI would like to meet on " + c +
-        ".\n\nName:\nCompany:\nWho I am dressing:\n\n");
     } else if (jour) {
-      txt.textContent = jour + " — now pick a time.";
-      txt.classList.remove("pret"); ok.setAttribute("aria-disabled","true");
+      dire(jour + ". Now pick a time.");
+      ok.setAttribute("aria-disabled","true");
+    } else {
+      dire("Pick a day and a time to continue.");
+      ok.setAttribute("aria-disabled","true");
     }
   }
 
   if (bJ) {
+    // 15 jours ouvrables a partir de demain
     var d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate()+1);
     var n = 0;
-    while (n < 10) {
+    while (n < 15) {
       if (d.getDay() !== 0 && d.getDay() !== 6) {
         var b = document.createElement("button"); b.type = "button";
         b.innerHTML = d.getDate() + " " + MOIS[d.getMonth()].slice(0,3) +
                       "<span>" + JOURS[d.getDay()].slice(0,3) + "</span>";
-        b.dataset.lib = JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear();
+        b.setAttribute("data-lib", JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear());
         bJ.appendChild(b); n++;
       }
       d.setDate(d.getDate()+1);
     }
+
     bJ.addEventListener("click", function(e){
       var b = e.target.closest("button"); if(!b) return;
-      jour = b.dataset.lib; heure = null;
+      jour = b.getAttribute("data-lib"); heure = null;
       [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
       bH.innerHTML = "";
-      HEURES.forEach(function(h){ var k=document.createElement("button"); k.type="button"; k.textContent=h; bH.appendChild(k); });
-      maj();
+      for (var h = 9; h <= 19; h++) {
+        var k = document.createElement("button"); k.type = "button";
+        k.textContent = (h < 10 ? "0" : "") + h + ":00";
+        bH.appendChild(k);
+      }
+      etat();
     });
+
     bH.addEventListener("click", function(e){
       var b = e.target.closest("button"); if(!b) return;
       heure = b.textContent;
       [].forEach.call(bH.children, function(x){ x.classList.toggle("on", x === b); });
-      maj();
+      etat();
     });
   }
 
+  if (ok) ok.addEventListener("click", function(e){
+    if (!jour || !heure) {
+      e.preventDefault(); dire("Pick a day and a time first.", "erreur");
+      document.getElementById("agenda").scrollIntoView({behavior:"smooth", block:"start"});
+      return;
+    }
+    var nom = val("f-nom"), mail = val("f-mail");
+    var creux = [];
+    [["f-nom", nom], ["f-mail", mail]].forEach(function(c){
+      var el = document.getElementById(c[0]);
+      if (!c[1]) { creux.push(el); el.classList.add("manque"); } else el.classList.remove("manque");
+    });
+    if (creux.length) {
+      e.preventDefault();
+      dire("I need your name and your email to confirm.", "erreur");
+      creux[0].focus();
+      return;
+    }
+
+    var lieuEl = document.querySelector('input[name="lieu"]:checked');
+    var L = [];
+    L.push("Hello Pedro,");
+    L.push("");
+    L.push("I would like to meet on " + jour + " at " + heure + ", Montreal time.");
+    L.push("");
+    L.push("Name: " + nom);
+    if (val("f-maison")) L.push("Boutique / agency: " + val("f-maison"));
+    L.push("Email: " + mail);
+    if (val("f-tel")) L.push("Phone: " + val("f-tel"));
+    if (val("f-qui"))  L.push("Dressing: " + val("f-qui"));
+    L.push("Where: " + (lieuEl ? lieuEl.value : "Showroom, 283 Notre-Dame Ouest"));
+    if (val("f-note")) { L.push(""); L.push("Note: " + val("f-note")); }
+    L.push("");
+
+    ok.href = "mailto:" + ADR +
+      "?subject=" + encodeURIComponent("Appointment request, " + jour + " at " + heure + ", " + nom) +
+      "&body="    + encodeURIComponent(L.join("\n"));
+    dire("Your mail app is opening. Press send and I will confirm.", "pret");
+  });
+
   var pr = document.getElementById("projet");
   if (pr) pr.href = "mailto:" + ADR + "?subject=" + encodeURIComponent("A special project") +
-    "&body=" + encodeURIComponent("Hello Pedro,\n\nI have a special project in mind. Could we talk about it?\n\n");
+    "&body=" + encodeURIComponent("Hello Pedro,\n\nI have a special project in mind. Could we talk about it?\n\nName:\nBoutique / agency:\nPhone:\n\n");
   var t = document.getElementById("sms1");
   if (t) t.href = "sms:+14384882168" + sep + "body=" +
-    encodeURIComponent("Hello Pedro — I saw the RADICE collection.");
+    encodeURIComponent("Hello Pedro, I saw the RADICE collection.");
 })();</script>
 
 <!-- Mesure d'audience sans cookie ni donnee personnelle -->
