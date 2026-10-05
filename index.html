@@ -325,7 +325,7 @@ var LOOKS = [
         b.innerHTML = d.getDate() + " " + MOIS[d.getMonth()].slice(0,3) +
                       "<span>" + JOURS[d.getDay()].slice(0,3) + "</span>";
         b.setAttribute("data-lib", JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear());
-        bJ.appendChild(b); n++;
+        b.setAttribute("aria-label", b.getAttribute("data-lib")); bJ.appendChild(b); n++;
       }
       d.setDate(d.getDate()+1);
     }

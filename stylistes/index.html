@@ -292,7 +292,7 @@ footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
         var b = document.createElement("button"); b.type = "button";
         b.innerHTML = d.getDate() + " " + MABR[d.getMonth()] + "<span>" + COURT[d.getDay()] + "</span>";
         b.setAttribute("data-lib", JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear());
-        bJ.appendChild(b); n++;
+        b.setAttribute("aria-label", b.getAttribute("data-lib")); bJ.appendChild(b); n++;
       }
       d.setDate(d.getDate()+1);
     }
