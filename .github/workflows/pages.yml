@@ -23,6 +23,8 @@ jobs:
       url: ${{ steps.pages.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # la source du generateur n'a rien a faire sur le site public
+      - run: rm -rf _source
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

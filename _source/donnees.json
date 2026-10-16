@@ -1,0 +1,150 @@
+{
+ "faits": [
+  {
+   "fr": [
+    "Délai",
+    "10 jours ouvrables",
+    "Des mesures à la livraison"
+   ],
+   "en": [
+    "Lead time",
+    "10 working days",
+    "From measurements to delivery"
+   ]
+  },
+  {
+   "fr": [
+    "Taille",
+    "Standards ou sur-mesure",
+    "Pas de frais supplémentaires"
+   ],
+   "en": [
+    "Size",
+    "Standard or made to measure",
+    "No extra cost"
+   ]
+  },
+  {
+   "fr": [
+    "Matières",
+    "Tanneries d'Italie",
+    "Cuir, soie, cachemire, 100 % naturelles"
+   ],
+   "en": [
+    "Materials",
+    "Italian tanneries",
+    "Leather, silk, cashmere, 100 % natural"
+   ]
+  },
+  {
+   "fr": [
+    "Fabrication",
+    "Montréal",
+    ""
+   ],
+   "en": [
+    "Made in",
+    "Montréal",
+    ""
+   ]
+  },
+  {
+   "fr": [
+    "Mesures",
+    "Au showroom ou à distance",
+    "Nous les reprenons ensemble, point par point"
+   ],
+   "en": [
+    "Measurements",
+    "At the showroom or remotely",
+    "We take them together, point by point"
+   ]
+  },
+  {
+   "fr": [
+    "Prix",
+    "1 200 à 7 000 $",
+    "Médiane de la collection à 2 400 $"
+   ],
+   "en": [
+    "Price",
+    "$1,200 to $7,000",
+    "Median of the collection at $2,400"
+   ]
+  }
+ ],
+ "macros": [
+  {
+   "fichier": "blouson_suede_macro.png?v=1790114752",
+   "piece": "STELLA",
+   "fr": "Suède noir",
+   "en": "Black suede"
+  },
+  {
+   "fichier": "12_VALERIE__2_macro_noir.png?v=1790115516",
+   "piece": "VALÉRIE",
+   "fr": "Cuir d’agneau",
+   "en": "Lambskin"
+  },
+  {
+   "fichier": "veste-longue-veau-facon-poulain-noir__2_macro.jpg?v=1790114928",
+   "piece": "ROSELYNE",
+   "fr": "Cuir façon poulain",
+   "en": "Pony-effect leather"
+  },
+  {
+   "fichier": "13_SALOME__2_macro.png?v=1790115516",
+   "piece": "SALOMÉ",
+   "fr": "Cuir façon croco",
+   "en": "Croc-effect leather"
+  },
+  {
+   "fichier": "salome-cuir-vieilli-rouge__2_macro.jpg?v=1790881246",
+   "piece": "SALOMÉ",
+   "fr": "Cuir vieilli",
+   "en": "Aged leather"
+  },
+  {
+   "fichier": "veste-courte-vernis-bordeaux__2_macro.jpg?v=1790114929",
+   "piece": "JEANNE",
+   "fr": "Cuir verni rouge cerise",
+   "en": "Cherry patent leather"
+  },
+  {
+   "fichier": "29_ANTONIN__2_macro.png?v=1790115661",
+   "piece": "ANTONIN",
+   "fr": "Shearling",
+   "en": "Shearling"
+  },
+  {
+   "fichier": "manteau-renard-blanc__2_macro.jpg?v=1790114929",
+   "piece": "AMY",
+   "fr": "Renard blanc",
+   "en": "White fox"
+  },
+  {
+   "fichier": "veste-renard-noir__2_macro.jpg?v=1790114929",
+   "piece": "LILY",
+   "fr": "Renard noir",
+   "en": "Black fox"
+  },
+  {
+   "fichier": "17_LEON__2_macro.png?v=1790115660",
+   "piece": "LÉON",
+   "fr": "Laine mérinos et cuir",
+   "en": "Merino wool and leather"
+  },
+  {
+   "fichier": "20_AURELE__3_macro.png?v=1790115963",
+   "piece": "AURÈLE",
+   "fr": "Cachemire",
+   "en": "Cashmere"
+  },
+  {
+   "fichier": "HENRI_blouson_laine_greige_4_macro.jpg?v=1790116038",
+   "piece": "HENRI",
+   "fr": "Lainage greige",
+   "en": "Greige wool"
+  }
+ ]
+}
