@@ -63,7 +63,10 @@
   "sms_lien": "Écrivez-moi un texto",
   "pied_role": "Directeur artistique et designer, collection RADICE",
   "pied_mention": "Visuels réalisés d'après les pièces. Fabrication à Montréal. Du lundi au vendredi, de 9&nbsp;h à 19&nbsp;h.",
-  "alt_macro": "Macro de la matière&nbsp;: {matiere}, pièce {piece}"
+  "alt_macro": "Macro de la matière&nbsp;: {matiere}, pièce {piece}",
+  "cta_tete": "Rendez-vous",
+  "cta_haut": "Choisir un créneau",
+  "cta_haut_detail": "En visioconférence, ou au showroom du 283 Notre-Dame Ouest."
  },
  "en": {
   "js_corps": "var L = [\"Hello Pedro,\", \"\",\n      \"I would like to meet you on \" + jour + \" at \" + heure + \", Montreal time.\", \"\",\n      \"Name: \" + nom];\n    if (val(\"f-maison\")) L.push(\"Practice: \" + val(\"f-maison\"));\n    L.push(\"Email: \" + mail);\n    if (val(\"f-tel\")) L.push(\"Phone: \" + val(\"f-tel\"));\n    if (val(\"f-qui\")) L.push(\"Dressing: \" + val(\"f-qui\"));\n    L.push(\"Where: \" + (lieuEl ? lieuEl.value : \"At the showroom, 283 Notre-Dame West\"));\n    if (val(\"f-note\")) { L.push(\"\"); L.push(\"To look at: \" + val(\"f-note\")); }",
@@ -129,6 +132,9 @@
   "sms_lien": "Send me a text",
   "pied_role": "Artistic director and designer, RADICE collection",
   "pied_mention": "Visuals made from the pieces. Made in Montréal. Monday to Friday, 9 a.m. to 7 p.m.",
-  "alt_macro": "Macro of the material&nbsp;: {matiere}, piece {piece}"
+  "alt_macro": "Macro of the material&nbsp;: {matiere}, piece {piece}",
+  "cta_tete": "Book",
+  "cta_haut": "Pick a time",
+  "cta_haut_detail": "By video call, or at the showroom at 283 Notre-Dame West."
  }
 }

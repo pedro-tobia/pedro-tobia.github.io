@@ -1,4 +1,4 @@
-# Page stylistes — source unique
+# Page stylistes, source unique
 
 La page existe en deux langues. **Ne jamais éditer les deux `index.html` à la
 main** : ils sont régénérés depuis ce dossier et vos corrections seraient
