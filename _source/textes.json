@@ -68,7 +68,7 @@
   "cta_haut": "Choisir un créneau",
   "cta_haut_detail": "En visioconférence, ou au showroom du 283 Notre-Dame Ouest.",
   "lien_boutique": "Voir les trente-trois pièces en ligne",
-  "partenariat": "Nous travaillons avec les professionnels sur des conditions établies au cas par cas. Elles se discutent au premier rendez-vous."
+  "partenariat": "Nous travaillons avec les professionnels sur des conditions établies au cas par cas, versées à la livraison. Elles vous sont envoyées par écrit <strong>avant</strong> le rendez-vous&nbsp;: écrivez-moi les mots «&nbsp;conditions professionnelles&nbsp;»."
  },
  "en": {
   "js_corps": "var L = [\"Hello Pedro,\", \"\",\n      \"I would like to meet you on \" + jour + \" at \" + heure + \", Montreal time.\", \"\",\n      \"Name: \" + nom];\n    if (val(\"f-maison\")) L.push(\"Practice: \" + val(\"f-maison\"));\n    L.push(\"Email: \" + mail);\n    if (val(\"f-tel\")) L.push(\"Phone: \" + val(\"f-tel\"));\n    if (val(\"f-qui\")) L.push(\"Dressing: \" + val(\"f-qui\"));\n    L.push(\"Where: \" + (lieuEl ? lieuEl.value : \"At the showroom, 283 Notre-Dame West\"));\n    if (val(\"f-note\")) { L.push(\"\"); L.push(\"To look at: \" + val(\"f-note\")); }",
@@ -139,6 +139,6 @@
   "cta_haut": "Pick a time",
   "cta_haut_detail": "By video call, or at the showroom at 283 Notre-Dame West.",
   "lien_boutique": "See the thirty-three pieces online",
-  "partenariat": "We work with professionals on terms set case by case. They are discussed at the first appointment."
+  "partenariat": "We work with professionals on terms set case by case, paid on delivery. They are sent to you in writing <strong>before</strong> the appointment&nbsp;: write to me with the words &ldquo;professional terms&rdquo;."
  }
 }
