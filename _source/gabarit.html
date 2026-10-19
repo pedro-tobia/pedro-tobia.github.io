@@ -329,11 +329,11 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
       jour = b.getAttribute("data-lib"); heure = null;
       [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
       bH.innerHTML = "";
-      for (var h = 9; h <= 19; h++) {
+      {{js_heures}}.forEach(function(h){
         var k = document.createElement("button"); k.type = "button";
-        k.textContent = (h < 10 ? "0" : "") {{js_heure}}
+        k.textContent = h;
         bH.appendChild(k);
-      }
+      });
       etat();
     });
     bH.addEventListener("click", function(e){

@@ -9,7 +9,6 @@
   "js_envoi": "dire(\"Votre messagerie s'ouvre. Appuyez sur envoyer et je confirme.\", \"pret\");",
   "js_sujet": "encodeURIComponent(\"Rendez-vous, \" + jour + \" à \" + heure + \", \" + nom)",
   "js_sms": "encodeURIComponent(\"Bonjour Pedro, j'ai vu la collection RADICE.\")",
-  "js_heure": "+ h + \" h\";",
   "js_jours": "[\"dimanche\",\"lundi\",\"mardi\",\"mercredi\",\"jeudi\",\"vendredi\",\"samedi\"]",
   "js_court": "[\"dim\",\"lun\",\"mar\",\"mer\",\"jeu\",\"ven\",\"sam\"]",
   "js_mois": "[\"janvier\",\"février\",\"mars\",\"avril\",\"mai\",\"juin\",\"juillet\",\"août\",\"septembre\",\"octobre\",\"novembre\",\"décembre\"]",
@@ -24,7 +23,7 @@
   "h1": "Chaque garde-robe mérite une pièce signature.",
   "appui": "Cuir, soie et cachemire issus des meilleures maisons italiennes. Venez découvrir notre collection en prêt-à-porter ou en sur mesure au 283, rue Notre-Dame Ouest. Vos pièces seront livrées en dix jours ouvrables.",
   "alt_bande": "Six silhouettes de la collection RADICE, trois hommes et trois femmes, manteaux d'hiver alignés sur fond blanc",
-  "leg_bande": "LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Trente-trois pièces finies sont au showroom, en taille d'essayage, femme et homme.",
+  "leg_bande": "LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Trente-trois pièces finies sont au showroom, en sizing européen, femme et homme. Elles sont là pour être vues et touchées&nbsp;: la vôtre est coupée sur vos mesures.",
   "racine_photo": "../photos/pedro-atelier.jpg",
   "alt_portrait": "Pedro Tobia en coulisses du défilé Héritage, Montréal, 19 septembre 2026",
   "sur_moi": "Pedro Tobia &middot; Directeur artistique",
@@ -68,7 +67,8 @@
   "cta_haut": "Choisir un créneau",
   "cta_haut_detail": "En visioconférence, ou au showroom du 283 Notre-Dame Ouest.",
   "lien_boutique": "Voir les trente-trois pièces en ligne",
-  "partenariat": "Nous travaillons avec les professionnels sur des conditions établies au cas par cas, versées à la livraison. Elles vous sont envoyées par écrit <strong>avant</strong> le rendez-vous&nbsp;: écrivez-moi les mots «&nbsp;conditions professionnelles&nbsp;»."
+  "partenariat": "Nous travaillons avec les professionnels sur des conditions établies au cas par cas, versées à la livraison. Elles vous sont envoyées par écrit <strong>avant</strong> le rendez-vous&nbsp;: écrivez-moi les mots «&nbsp;conditions professionnelles&nbsp;».",
+  "js_heures": "[\"10 h\",\"12 h\",\"15 h\",\"17 h 30\"]"
  },
  "en": {
   "js_corps": "var L = [\"Hello Pedro,\", \"\",\n      \"I would like to meet you on \" + jour + \" at \" + heure + \", Montreal time.\", \"\",\n      \"Name: \" + nom];\n    if (val(\"f-maison\")) L.push(\"Practice: \" + val(\"f-maison\"));\n    L.push(\"Email: \" + mail);\n    if (val(\"f-tel\")) L.push(\"Phone: \" + val(\"f-tel\"));\n    if (val(\"f-qui\")) L.push(\"Dressing: \" + val(\"f-qui\"));\n    L.push(\"Where: \" + (lieuEl ? lieuEl.value : \"At the showroom, 283 Notre-Dame West\"));\n    if (val(\"f-note\")) { L.push(\"\"); L.push(\"To look at: \" + val(\"f-note\")); }",
@@ -80,7 +80,6 @@
   "js_envoi": "dire(\"Your mail app is opening. Press send and I will confirm.\", \"pret\");",
   "js_sujet": "encodeURIComponent(\"Appointment, \" + jour + \" at \" + heure + \", \" + nom)",
   "js_sms": "encodeURIComponent(\"Hello Pedro, I saw the RADICE collection.\")",
-  "js_heure": "+ h + \":00\";",
   "js_jours": "[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]",
   "js_court": "[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"]",
   "js_mois": "[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"]",
@@ -95,7 +94,7 @@
   "h1": "Every wardrobe deserves one signature piece.",
   "appui": "Leather, silk and cashmere from the finest Italian houses. Come and see the collection in ready-to-wear or made to measure at 283 Notre-Dame Street West. Your pieces are delivered in ten working days.",
   "alt_bande": "Six silhouettes from the RADICE collection, three men and three women, winter coats on a white ground",
-  "leg_bande": "LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Thirty-three finished pieces are at the showroom, in fitting size, for women and men.",
+  "leg_bande": "LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Thirty-three finished pieces are at the showroom, in European sizing, for women and men. They are there to be seen and handled&nbsp;: yours is cut to your measurements.",
   "racine_photo": "../../photos/pedro-atelier.jpg",
   "alt_portrait": "Pedro Tobia backstage at the Héritage show, Montréal, 19 September 2026",
   "sur_moi": "Pedro Tobia &middot; Artistic Director",
@@ -139,6 +138,7 @@
   "cta_haut": "Pick a time",
   "cta_haut_detail": "By video call, or at the showroom at 283 Notre-Dame West.",
   "lien_boutique": "See the thirty-three pieces online",
-  "partenariat": "We work with professionals on terms set case by case, paid on delivery. They are sent to you in writing <strong>before</strong> the appointment&nbsp;: write to me with the words &ldquo;professional terms&rdquo;."
+  "partenariat": "We work with professionals on terms set case by case, paid on delivery. They are sent to you in writing <strong>before</strong> the appointment&nbsp;: write to me with the words &ldquo;professional terms&rdquo;.",
+  "js_heures": "[\"10:00\",\"12:00\",\"15:00\",\"17:30\"]"
  }
 }

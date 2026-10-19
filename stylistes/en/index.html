@@ -199,15 +199,15 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
 
 <div class="bande">
   <img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/BANDE_6_SILHOUETTES_2400.jpg?v=1790805170&amp;width=2000" alt="Six silhouettes from the RADICE collection, three men and three women, winter coats on a white ground" width="2400" height="1350">
-  <p class="leg">LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Thirty-three finished pieces are at the showroom, in fitting size, for women and men.</p>
+  <p class="leg">LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Thirty-three finished pieces are at the showroom, in European sizing, for women and men. They are there to be seen and handled&nbsp;: yours is cut to your measurements.</p>
 </div>
 
 <dl class="faits">
   <div class="fait"><dt>Lead time</dt><dd>10 working days<span>From measurements to delivery</span></dd></div>
-  <div class="fait"><dt>Size</dt><dd>Standard or made to measure<span>No extra cost</span></dd></div>
+  <div class="fait"><dt>Size</dt><dd>European sizing, or made to measure<span>Made to measure costs nothing more</span></dd></div>
   <div class="fait"><dt>Materials</dt><dd>Italian tanneries<span>Leather, silk, cashmere, 100 % natural</span></dd></div>
   <div class="fait"><dt>Made in</dt><dd>Montréal</dd></div>
-  <div class="fait"><dt>Measurements</dt><dd>At the showroom or remotely<span>We take them together, point by point</span></dd></div>
+  <div class="fait"><dt>Alterations</dt><dd>Included<span>Done 24 to 48 hours after the fitting</span></dd></div>
   <div class="fait"><dt>Price</dt><dd>$1,200 to $7,000<span>Median of the collection at $2,400</span></dd></div>
 </dl>
 
@@ -359,11 +359,11 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
       jour = b.getAttribute("data-lib"); heure = null;
       [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
       bH.innerHTML = "";
-      for (var h = 9; h <= 19; h++) {
+      ["10:00","12:00","15:00","17:30"].forEach(function(h){
         var k = document.createElement("button"); k.type = "button";
-        k.textContent = (h < 10 ? "0" : "") + h + ":00";
+        k.textContent = h;
         bH.appendChild(k);
-      }
+      });
       etat();
     });
     bH.addEventListener("click", function(e){

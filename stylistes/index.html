@@ -199,15 +199,15 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
 
 <div class="bande">
   <img src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/BANDE_6_SILHOUETTES_2400.jpg?v=1790805170&amp;width=2000" alt="Six silhouettes de la collection RADICE, trois hommes et trois femmes, manteaux d'hiver alignés sur fond blanc" width="2400" height="1350">
-  <p class="leg">LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Trente-trois pièces finies sont au showroom, en taille d'essayage, femme et homme.</p>
+  <p class="leg">LÉON &middot; ROSE &middot; DANTE &middot; AMY &middot; MARCEL &middot; SOLÈNE. Trente-trois pièces finies sont au showroom, en sizing européen, femme et homme. Elles sont là pour être vues et touchées&nbsp;: la vôtre est coupée sur vos mesures.</p>
 </div>
 
 <dl class="faits">
   <div class="fait"><dt>Délai</dt><dd>10 jours ouvrables<span>Des mesures à la livraison</span></dd></div>
-  <div class="fait"><dt>Taille</dt><dd>Standards ou sur-mesure<span>Pas de frais supplémentaires</span></dd></div>
+  <div class="fait"><dt>Taille</dt><dd>Sizing européen, ou sur mesure<span>Le sur-mesure ne coûte rien de plus</span></dd></div>
   <div class="fait"><dt>Matières</dt><dd>Tanneries d'Italie<span>Cuir, soie, cachemire, 100 % naturelles</span></dd></div>
   <div class="fait"><dt>Fabrication</dt><dd>Montréal</dd></div>
-  <div class="fait"><dt>Mesures</dt><dd>Au showroom ou à distance<span>Nous les reprenons ensemble, point par point</span></dd></div>
+  <div class="fait"><dt>Retouches</dt><dd>Comprises<span>Faites en 24 à 48 h après l'essayage</span></dd></div>
   <div class="fait"><dt>Prix</dt><dd>1 200 à 7 000 $<span>Médiane de la collection à 2 400 $</span></dd></div>
 </dl>
 
@@ -359,11 +359,11 @@ header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-
       jour = b.getAttribute("data-lib"); heure = null;
       [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
       bH.innerHTML = "";
-      for (var h = 9; h <= 19; h++) {
+      ["10 h","12 h","15 h","17 h 30"].forEach(function(h){
         var k = document.createElement("button"); k.type = "button";
-        k.textContent = (h < 10 ? "0" : "") + h + " h";
+        k.textContent = h;
         bH.appendChild(k);
-      }
+      });
       etat();
     });
     bH.addEventListener("click", function(e){
