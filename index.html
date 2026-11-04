@@ -335,11 +335,11 @@ var LOOKS = [
       jour = b.getAttribute("data-lib"); heure = null;
       [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
       bH.innerHTML = "";
-      for (var h = 9; h <= 19; h++) {
+      ["10:00","12:00","15:00","17:30"].forEach(function(h){
         var k = document.createElement("button"); k.type = "button";
-        k.textContent = (h < 10 ? "0" : "") + h + ":00";
+        k.textContent = h;
         bH.appendChild(k);
-      }
+      });
       etat();
     });
 
