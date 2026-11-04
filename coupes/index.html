@@ -53,6 +53,108 @@ figcaption b{display:block;font-size:11px;letter-spacing:.14em;text-transform:up
 .aussi{margin:18px 0 0;font-size:14px;color:var(--n5)}
 
 footer{margin:56px 0 0;border-top:1px solid var(--n2);padding:22px 0 60px;font-size:13px;line-height:19px;color:var(--n5)}
+.agenda{margin:30px 0 0}
+.lab{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--n5);margin:26px 0 12px}
+.lab:first-child{margin-top:0}
+.lab b{flex:0 0 auto;width:19px;height:19px;border-radius:50%;background:var(--noir);color:var(--blanc);
+  font-size:10px;font-weight:600;letter-spacing:0;display:flex;align-items:center;justify-content:center}
+.lab .fuseau{font-weight:400;letter-spacing:.04em;text-transform:none;color:var(--n4)}
+.defile{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 4px;padding-bottom:4px}
+.jours,.heures{display:flex;gap:8px}
+.jours{flex-wrap:nowrap}
+.heures{flex-wrap:wrap}
+.jours button,.heures button{flex:0 0 auto;font:inherit;font-size:13px;line-height:17px;
+  min-height:44px;padding:9px 14px;border:1px solid var(--n2);background:var(--blanc);color:var(--noir);
+  cursor:pointer;text-align:center;white-space:nowrap}
+.jours button{min-width:64px}
+.heures button{min-width:66px;font-variant-numeric:tabular-nums}
+.jours button span{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--n4);margin-top:2px}
+.jours button.on,.heures button.on{background:var(--noir);border-color:var(--noir);color:var(--blanc)}
+.jours button.on span{color:var(--n2)}
+.heures .vide{margin:0;padding:12px 0;font-size:13px;color:var(--n4)}
+.champs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.champs label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--n5)}
+.champs .plein{grid-column:1/-1}
+.champs input,.champs textarea{display:block;width:100%;margin-top:6px;
+  font:inherit;font-size:15px;line-height:21px;letter-spacing:0;text-transform:none;color:var(--noir);
+  padding:11px 12px;border:1px solid var(--n2);border-radius:0;background:var(--blanc);-webkit-appearance:none}
+.champs textarea{resize:vertical;min-height:76px}
+.champs input:focus,.champs textarea:focus{outline:2px solid var(--noir);outline-offset:-2px;border-color:var(--noir)}
+.champs input.manque{border-color:#8C3A2B}
+.champs fieldset{grid-column:1/-1;margin:0;padding:0;border:0}
+.champs legend{padding:0;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--n5)}
+.champs .radio{display:flex;align-items:center;gap:9px;margin-top:9px;font-size:15px;font-weight:400;
+  letter-spacing:0;text-transform:none;color:var(--noir);cursor:pointer}
+.champs .radio input{width:auto;margin:0;-webkit-appearance:auto;appearance:auto}
+.choisi{margin:26px 0 14px;font-size:15px;line-height:21px;color:var(--n5)}
+.choisi.pret{color:var(--noir);font-weight:600}
+.choisi.erreur{color:#8C3A2B}
+#confirmer[aria-disabled="true"]{background:var(--n2);border-color:var(--n2);color:var(--n4)}
+.fine{margin:12px 0 0;font-size:12px;line-height:18px;color:var(--n4);max-width:56ch}
+.aussi{margin:20px 0 0;font-size:14px;line-height:20px;color:var(--n5)}
+@media(max-width:560px){
+  .champs{grid-template-columns:1fr}
+  .heures button{flex:1 0 calc(33.333% - 6px);min-width:0}
+}
+
+/* mur de matieres */
+.matieres{margin:0}
+.mur{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:30px 0 0}
+@media(max-width:860px){.mur{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media(max-width:560px){.mur{grid-template-columns:repeat(3,1fr);gap:8px}
+  .mur figcaption{font-size:11px;line-height:14px}
+  .mur figcaption span{font-size:9px;letter-spacing:.08em}}
+.mur figure{margin:0}
+.mur img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--n1)}
+.mur figcaption{margin-top:9px;font-size:13px;line-height:17px;font-weight:600;letter-spacing:-.005em}
+.mur figcaption span{display:block;margin-top:2px;font-size:11px;line-height:15px;font-weight:400;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--n4)}
+
+footer{margin:72px 0 0;border-top:1px solid var(--n2);padding:24px 0 64px;font-size:13px;line-height:19px;color:var(--n5)}
+footer .logo{width:132px;margin-bottom:20px}
+footer .mention{margin-top:16px;font-size:12px;line-height:18px;color:var(--n4)}
+
+/* la ligne partenariat : presente, jamais chiffree */
+.partenariat{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--n2);
+  font-size:14px;line-height:20px;color:var(--n5);max-width:58ch}
+
+/* lien secondaire vers la boutique : discret, il ne doit pas concurrencer le rendez-vous */
+.boutique{margin:18px 0 0}
+.boutique a{display:inline-flex;align-items:center;gap:8px;min-height:44px;
+  font-size:14px;line-height:20px;color:var(--n5);text-decoration:none;
+  border-bottom:1px solid var(--n2)}
+.boutique a::after{content:"\2192";font-size:15px;line-height:1}
+.boutique a:hover,.boutique a:focus-visible{color:var(--noir);border-bottom-color:var(--noir)}
+
+/* outils de l'en-tete : langue + rendez-vous */
+.outils{display:flex;align-items:center;gap:10px}
+.bt-tete{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;
+  background:var(--noir);color:var(--blanc);text-decoration:none;
+  font-size:12px;font-weight:600;letter-spacing:.1em;white-space:nowrap}
+.bt-tete:hover,.bt-tete:focus-visible{opacity:.82}
+@media(max-width:620px){
+  .outils{gap:7px}
+  .bt-tete{min-height:36px;padding:0 12px;font-size:11px;letter-spacing:.06em}
+}
+/* appel a l'action sous l'accroche */
+.tot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:26px 0 0}
+.tot span{font-size:13px;line-height:18px;color:var(--n5);max-width:30ch}
+
+/* en-tete collant : la bascule de langue reste atteignable partout */
+#agenda{scroll-margin-top:88px}
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 0;background:var(--blanc);border-bottom:1px solid var(--n2)}
+.langue{display:inline-flex;align-items:center;border:1px solid var(--n2);background:var(--blanc)}
+.langue span,.langue a{display:inline-flex;align-items:center;justify-content:center;
+  min-width:46px;min-height:38px;padding:0 12px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-decoration:none}
+.langue span{background:var(--noir);color:var(--blanc)}
+.langue a{color:var(--n5)}
+.langue a:hover,.langue a:focus-visible{background:var(--n1);color:var(--noir)}
+@media(max-width:620px){
+  .langue span,.langue a{min-width:42px;min-height:36px;padding:0 10px;font-size:11px}
+}
 footer .mention{margin-top:14px;font-size:12px;color:var(--n4)}
 </style>
 </head>
@@ -62,7 +164,7 @@ footer .mention{margin-top:14px;font-size:12px;color:var(--n4)}
 
 <header>
   <img class="couteau" src="https://cdn.shopify.com/s/files/1/0613/3982/8400/files/godefroi-couteau-marque.png?v=1790719098&amp;width=240" alt="Maison Godefroi">
-  <a class="bt-tete" href="../stylistes/#agenda">Rendez-vous</a>
+  <a class="bt-tete" href="#agenda">Rendez-vous</a>
 </header>
 
 <section class="ouverture">
@@ -95,16 +197,37 @@ footer .mention{margin-top:14px;font-size:12px;color:var(--n4)}
 
 </div>
 
-<section class="fin">
-  <h2>Si les coupes tiennent, dites-le-moi. Si elles ne tiennent pas, dites-le-moi aussi.</h2>
-  <p>Je reçois moi-même au showroom, ou nous prenons vingt minutes en visioconférence si le déplacement ne vous arrange pas.</p>
-  <ul class="faits">
-    <li>Sur mesure sans supplément, ou nos tailles de maison en sizing européen</li>
-    <li>Dix jours ouvrables entre les mesures et la livraison</li>
-    <li>Retouches comprises, faites en 24 à 48 heures après l'essayage</li>
-  </ul>
-  <a class="bt" href="../stylistes/#agenda">Choisir un moment</a>
-  <p class="aussi">Ou répondez simplement à mon courriel, c'est aussi bien.</p>
+<section id="agenda">
+  <p class="sur">Les essayer</p>
+  <h2>Choisissez un moment, et je vous reçois moi-même au showroom.</h2>
+  <p style="margin-top:18px;max-width:56ch">Les pièces sont là, en taille d'essayage, au 283&nbsp;rue Notre-Dame Ouest. Je les sors et vous les passez. Si le déplacement ne vous arrange pas, vingt minutes en visioconférence suffisent et je prends les mesures à distance.</p>
+
+  <div class="agenda">
+    <p class="lab"><b>1</b> Choisissez un jour</p>
+    <div class="defile"><div class="jours" id="jours"></div></div>
+
+    <p class="lab"><b>2</b> Choisissez une heure <span class="fuseau">heure de Montréal</span></p>
+    <div class="defile"><div class="heures" id="heures"><p class="vide">Choisissez d'abord un jour.</p></div></div>
+
+    <p class="lab"><b>3</b> Qui est-ce que je reçois&nbsp;?</p>
+    <div class="champs">
+      <label>Votre nom<input id="f-nom" type="text" autocomplete="name" required></label>
+      <label>Courriel<input id="f-mail" type="email" autocomplete="email" inputmode="email" required></label>
+      <label>Téléphone<input id="f-tel" type="tel" autocomplete="tel" inputmode="tel"></label>
+      <label>Votre maison, s'il y en a une<input id="f-maison" type="text" autocomplete="organization"></label>
+      <label class="plein">Ce que vous aimeriez voir<textarea id="f-note" rows="3" placeholder="Une pièce de la collection, un manteau que vous cherchez depuis longtemps, une mesure qui ne passe jamais"></textarea></label>
+      <fieldset class="plein">
+        <legend>Où</legend>
+        <label class="radio"><input type="radio" name="lieu" value="Au showroom, 283 Notre-Dame Ouest" checked> Au showroom, 283 Notre-Dame Ouest</label>
+        <label class="radio"><input type="radio" name="lieu" value="En visioconférence"> En visioconférence</label>
+      </fieldset>
+    </div>
+
+    <p class="choisi" id="choisi">Choisissez un jour et une heure pour continuer.</p>
+    <a class="bt" id="confirmer" href="#agenda" aria-disabled="true">Envoyer ma demande</a>
+  </div>
+
+  <p class="aussi">Vous préférez faire court&nbsp;? <a href="sms:+14384882168">Écrivez-moi un texto</a> &middot; <a href="tel:+14384882168">438 488-2168</a></p>
 </section>
 
 <footer>
@@ -116,6 +239,97 @@ footer .mention{margin-top:14px;font-size:12px;color:var(--n4)}
 </footer>
 
 </div>
+
+<script>(function(){
+  var sep = /iP(hone|ad|od)|Mac/.test(navigator.platform) ? "&" : "?";
+  var ADR = "pedro@maisongodefroi.com";
+  var JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"], COURT = ["dim","lun","mar","mer","jeu","ven","sam"], MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"], MABR = ["janv","févr","mars","avr","mai","juin","juil","août","sept","oct","nov","déc"];
+  var bJ = document.getElementById("jours"), bH = document.getElementById("heures");
+  var txt = document.getElementById("choisi"), ok = document.getElementById("confirmer");
+  var jour = null, heure = null;
+
+  function val(id){ var e = document.getElementById(id); return e ? e.value.trim() : ""; }
+  function dire(m, cls){ txt.textContent = m; txt.className = "choisi" + (cls ? " " + cls : ""); }
+
+  function etat(){
+    if (jour && heure) {
+      dire("Le " + jour + " à " + heure + ", heure de Montréal.", "pret");
+      ok.removeAttribute("aria-disabled");
+    } else if (jour) {
+      dire("Le " + jour + ". Choisissez maintenant une heure.");
+      ok.setAttribute("aria-disabled","true");
+    } else {
+      dire("Choisissez un jour et une heure pour continuer.");
+      ok.setAttribute("aria-disabled","true");
+    }
+  }
+
+  if (bJ) {
+    var d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate()+1);
+    var n = 0;
+    while (n < 15) {
+      if (d.getDay() !== 0 && d.getDay() !== 6) {
+        var b = document.createElement("button"); b.type = "button";
+        b.innerHTML = d.getDate() + " " + MABR[d.getMonth()] + "<span>" + COURT[d.getDay()] + "</span>";
+        b.setAttribute("data-lib", JOURS[d.getDay()] + " " + d.getDate() + " " + MOIS[d.getMonth()] + " " + d.getFullYear());
+        b.setAttribute("aria-label", b.getAttribute("data-lib"));
+        bJ.appendChild(b); n++;
+      }
+      d.setDate(d.getDate()+1);
+    }
+    bJ.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      jour = b.getAttribute("data-lib"); heure = null;
+      [].forEach.call(bJ.children, function(x){ x.classList.toggle("on", x === b); });
+      bH.innerHTML = "";
+      ["10 h","12 h","15 h","17 h 30"].forEach(function(h){
+        var k = document.createElement("button"); k.type = "button";
+        k.textContent = h;
+        bH.appendChild(k);
+      });
+      etat();
+    });
+    bH.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      heure = b.textContent;
+      [].forEach.call(bH.children, function(x){ x.classList.toggle("on", x === b); });
+      etat();
+    });
+  }
+
+  if (ok) ok.addEventListener("click", function(e){
+    if (!jour || !heure) {
+      e.preventDefault(); dire("Choisissez d'abord un jour et une heure.", "erreur");
+      document.getElementById("agenda").scrollIntoView({behavior:"smooth", block:"start"});
+      return;
+    }
+    var nom = val("f-nom"), mail = val("f-mail"), creux = [];
+    [["f-nom", nom], ["f-mail", mail]].forEach(function(c){
+      var el = document.getElementById(c[0]);
+      if (!c[1]) { creux.push(el); el.classList.add("manque"); } else el.classList.remove("manque");
+    });
+    if (creux.length) {
+      e.preventDefault(); dire("Il me faut votre nom et votre courriel pour confirmer.", "erreur"); creux[0].focus(); return;
+    }
+    var lieuEl = document.querySelector('input[name="lieu"]:checked');
+    var L = ["Bonjour Pedro,", "",
+      "J'aimerais vous rencontrer le " + jour + " à " + heure + ", heure de Montréal.", "",
+      "Nom : " + nom];
+    if (val("f-maison")) L.push("Maison : " + val("f-maison"));
+    L.push("Courriel : " + mail);
+    if (val("f-tel")) L.push("Téléphone : " + val("f-tel"));
+    L.push("Lieu : " + (lieuEl ? lieuEl.value : "Au showroom, 283 Notre-Dame Ouest"));
+    if (val("f-note")) { L.push(""); L.push("À regarder : " + val("f-note")); }
+    L.push("");
+    ok.href = "mailto:" + ADR +
+      "?subject=" + encodeURIComponent("Rendez-vous, " + jour + " à " + heure + ", " + nom) +
+      "&body="    + encodeURIComponent(L.join("\n"));
+    dire("Votre messagerie s'ouvre. Appuyez sur envoyer et je confirme.", "pret");
+  });
+
+  var t = document.getElementById("sms1");
+  if (t) t.href = "sms:+14384882168" + sep + "body=" + encodeURIComponent("Bonjour Pedro, j'ai vu la collection RADICE.");
+})();</script>
 
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "09a4bf97e32146649b779167ebb440aa"}'></script>
